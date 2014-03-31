@@ -1,4 +1,6 @@
-package com.example.brainatlas_android;
+package com.mm.brainatlas.activities;
+
+import com.example.brainatlas_android.R;
 
 import android.os.Bundle;
 import android.app.Activity;
