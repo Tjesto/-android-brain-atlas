@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">Brain Atlas</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_exit">Exit</string>
     <string name="hello_world">Hello world!</string>
+    <string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
 
 </resources>
