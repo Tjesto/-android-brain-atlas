@@ -1,7 +1,7 @@
 package com.mm.brainatlas.services;
 
 import com.mm.brainatlas.BrainNotification;
-import com.mm.brainatlas.Utils;
+import com.mm.brainatlas.utils.Utils;
 
 import android.app.Service;
 import android.content.Intent;

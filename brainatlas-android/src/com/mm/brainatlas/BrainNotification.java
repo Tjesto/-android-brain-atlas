@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
 import com.mm.brainatlas.services.BrainService;
+import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
 public class BrainNotification {

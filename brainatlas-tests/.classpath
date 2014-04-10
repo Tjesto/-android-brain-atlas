@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src-units"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK/brainatlas-android"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/brainatlas-android"/>
+	<classpathentry kind="lib" path="P:/mock/easymock-3.2/easymock-3.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
