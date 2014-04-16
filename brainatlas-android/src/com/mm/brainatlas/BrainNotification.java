@@ -5,6 +5,8 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 
 import com.mm.brainatlas.services.BrainService;
@@ -36,8 +38,10 @@ public class BrainNotification {
 
 	private Notification buildNotification(String activityName) {
 		Notification builderNotification;
+		Bitmap largeIcon = BitmapFactory.decodeResource(brainService.getResources(), R.drawable.large_notification);
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(
-				brainService).setSmallIcon(R.drawable.ic_launcher)
+				brainService).setSmallIcon(R.drawable.small_notification)
+				.setLargeIcon(largeIcon)
 				.setContentTitle(brainService.getText(R.string.app_name))
 				.setContentText(activityName);
 		Intent intent = new Intent(brainService, Utils.getActivityFromName(activityName));

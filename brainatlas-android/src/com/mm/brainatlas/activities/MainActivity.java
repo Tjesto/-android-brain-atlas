@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
@@ -34,6 +35,11 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()) {
+		case R.id.action_show_diseases:
+		case R.id.action_show_parts:
+		case R.id.action_show_sources:
+			Toast.makeText(this, "Opcja w trakcie implementacji", Toast.LENGTH_LONG).show();
+			return true;			
 		case R.id.action_exit:
 			exitAtlas();
 			return true;

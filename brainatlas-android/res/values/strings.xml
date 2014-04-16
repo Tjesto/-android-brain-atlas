@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Brain Atlas</string>
-    <string name="action_exit">Exit</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Atlas Mózgu</string>
+	<string name="action_show_diseases">Pokaż listę chorób</string>
+    <string name="action_show_parts">Pokaż listę części mózgu</string>
+    <string name="action_show_sources">Źródła</string>
+    <string name="action_exit">Wyjście</string>    
     <string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
     <string name="s_title">Źródła</string>
     <string name="source_1">\"lorem ipsum l lorem ipsum\" l lorem ipsum l lorem ipsum  - l lorem ipsum l</string>
+	
 
 </resources>
