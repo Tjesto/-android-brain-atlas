@@ -1,6 +1,9 @@
 package com.mm.brainatlas.utils;
 
+import android.util.Log;
+
 import com.mm.brainatlas.activities.MainActivity;
+import com.mm.brainatlas.activities.SourcesActivity;
 import com.mm.brainatlas.activities.StartActivity;
 
 public class Utils {
@@ -13,6 +16,18 @@ public class Utils {
 			result = StartActivity.class;
 		} else if (MainActivity.TAG.contains(activityName)) {
 			result = MainActivity.class;
+		} else if (SourcesActivity.TAG.contains(activityName)) {
+			result = SourcesActivity.class;
+		}
+		return result;
+	}
+	
+	public static Class<?> getActivityFromNameRef(String activityName) {
+		Class<?> result = null;		
+		try {
+			result = Class.forName(activityName);
+		} catch (ClassNotFoundException e) {
+			ApplicationLog.error("Utils", e.toString());
 		}
 		return result;
 	}

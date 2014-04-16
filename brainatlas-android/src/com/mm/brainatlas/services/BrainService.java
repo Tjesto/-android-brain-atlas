@@ -40,7 +40,7 @@ public class BrainService extends Service {
 				if (name == null) {
 					name = "";
 				}	
-				brainNotification.update(Utils.getNameFromTag(name));
+				brainNotification.update(name);
 			}
 		} else if (action.equals(ACTION_EXIT)) {
 			brainNotification.cancel();

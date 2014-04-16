@@ -43,11 +43,13 @@ public class BrainNotification {
 				brainService).setSmallIcon(R.drawable.small_notification)
 				.setLargeIcon(largeIcon)
 				.setContentTitle(brainService.getText(R.string.app_name))
-				.setContentText(activityName);
-		Intent intent = new Intent(brainService, Utils.getActivityFromName(activityName));
-		
-		PendingIntent pIntent = PendingIntent.getActivity(brainService, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-		builder.setContentIntent(pIntent);
+				.setContentText(Utils.getNameFromTag(activityName));
+		if (activityName != null && !activityName.equals("")) {
+			Intent intent = new Intent(brainService, Utils.getActivityFromNameRef(activityName));
+			
+			PendingIntent pIntent = PendingIntent.getActivity(brainService, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+			builder.setContentIntent(pIntent);
+		}
 		builderNotification = builder.build();
 		return builderNotification;
 	}

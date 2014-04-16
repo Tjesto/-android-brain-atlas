@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="com.mm.brainatlas" x="68" y="55">
+        <DependencyLink destination="com.mm.brainatlas.services"/>
+        <DependencyLink destination="com.mm.brainatlas.utils"/>
+    </Package>
+    <Package name="com.mm.brainatlas.activities" x="437" y="210">
+        <DependencyLink destination="com.mm.brainatlas.services"/>
+        <DependencyLink destination="com.mm.brainatlas.utils"/>
+    </Package>
+    <Package name="com.mm.brainatlas.services" x="92" y="202">
+        <DependencyLink destination="com.mm.brainatlas.utils"/>
+        <DependencyLink destination="com.mm.brainatlas"/>
+    </Package>
+    <Package name="com.mm.brainatlas.utils" x="333" y="54">
+        <DependencyLink destination="com.mm.brainatlas.activities"/>
+    </Package>
+    <Package name="com.mm.brainatlas.listeners" x="612" y="59"/>
+</PackageAnalysis>
