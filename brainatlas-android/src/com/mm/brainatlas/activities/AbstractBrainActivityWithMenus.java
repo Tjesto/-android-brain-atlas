@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public abstract class AbstractBrainActivityWithMenus extends Activity {
 
+	private static final Object EXIT_ACTIVITY = null;
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
