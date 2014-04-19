@@ -18,6 +18,13 @@ Curabitur condimentum ullamcorper mi, id vehicula nulla placerat ac. Curabitur a
     <string name="source_5">tyle na chwile obecna starczy?</string>
     <string name="bp_name">Nazwa części mózgu</string>
     <string name="bp_desc">Tu będzie znajdować się długi i jakże porywający tekst opisujący daną część mózgu a także jej funkcjonowanie i pochodzenie, wszystko jako jeden baaardzo długi tekst. Ewentualnie z enterami ;)</string>
+    <string name="bd_name">Nazwa choroby</string>
+    <string name="bd_etymology">Przyczyny</string>
+    <string name="bd_e_desc"></string>
+    <string name="bd_symptoms">Objawy</string>
+    <string name="bd_s_desc">A tu będzie jakże porywający opis objawów zapewne długi</string>
+    <string name="bd_cure">Zapobieganie i leczenie</string>
+    <string name="bd_c_desc">Opis sposobów leczenia i zapobiegania też zapewne długi</string>
     
     
 	
