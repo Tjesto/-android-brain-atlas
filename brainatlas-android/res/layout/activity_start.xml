@@ -13,7 +13,7 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignLeft="@+id/part_view"
         android:layout_alignParentTop="true"
         android:src="@drawable/launch_icon" 
         android:contentDescription="@string/logo"/>
@@ -28,7 +28,7 @@
         android:textSize="24sp" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/part_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -40,8 +40,8 @@
         android:id="@+id/studies_info_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
+        android:layout_alignRight="@+id/part_view"
+        android:layout_below="@+id/part_view"
         android:layout_marginRight="16dp"
         android:layout_marginTop="37dp"
         android:text="@string/studies_text" />

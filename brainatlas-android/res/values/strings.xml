@@ -1,18 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales urna et sem luctus, sit amet facilisis dui sollicitudin. Proin lobortis, urna a vehicula iaculis, neque dui ultricies diam, et porta est purus sollicitudin quam. Nunc adipiscing magna vitae risus porttitor, sodales iaculis metus consequat. Morbi ut leo dapibus, aliquet libero eget, dictum eros. In urna dui, fermentum ac diam a, vulputate fringilla quam. Proin sit amet pretium orci. Phasellus accumsan congue mauris porttitor egestas. Ut ut leo in turpis elementum consequat in sit amet eros. Praesent diam mauris, laoreet sit amet dolor non, feugiat consectetur libero. Suspendisse potenti. Mauris ultrices varius mollis.
+
+Curabitur condimentum ullamcorper mi, id vehicula nulla placerat ac. Curabitur ac dui auctor, auctor odio non, posuere risus. Proin purus neque, egestas venenatis vulputate in, convallis vel eros. Cras pretium lacus fermentum, consectetur quam id, volutpat nulla. Proin luctus ante vitae quam ornare, ut interdum magna venenatis. Vestibulum posuere ante hendrerit quam bibendum tincidunt ac non lacus. Vivamus ut nisl adipiscing, sollicitudin diam at, hendrerit augue. Cras sagittis velit eu ligula elementum mollis. In feugiat vulputate lectus, ac posuere felis vestibulum nec. Maecenas pharetra nulla vitae ullamcorper commodo. Ut vitae vestibulum nulla. Nunc blandit massa sit amet libero consectetur, sit amet tempor eros laoreet. Donec sit amet elit cursus, malesuada urna a, tincidunt arcu. Vivamus id vulputate nisl. In sapien quam, mollis vitae sem sit amet, gravida placerat sapien.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales urna et sem luctus, sit amet facilisis dui sollicitudin. Proin lobortis, urna a vehicula iaculis, neque dui ultricies diam, et porta est purus sollicitudin quam. Nunc adipiscing magna vitae risus porttitor, sodales iaculis metus consequat. Morbi ut leo dapibus, aliquet libero eget, dictum eros. In urna dui, fermentum ac diam a, vulputate fringilla quam. Proin sit amet pretium orci. Phasellus accumsan congue mauris porttitor egestas. Ut ut leo in turpis elementum consequat in sit amet eros. Praesent diam mauris, laoreet sit amet dolor non, feugiat consectetur libero. Suspendisse potenti. Mauris ultrices varius mollis.
+
+Curabitur condimentum ullamcorper mi, id vehicula nulla placerat ac. Curabitur ac dui auctor, auctor odio non, posuere risus. Proin purus neque, egestas venenatis vulputate in, convallis vel eros. Cras pretium lacus fermentum, consectetur quam id, volutpat nulla. Proin luctus ante vitae quam ornare, ut interdum magna venenatis. Vestibulum posuere ante hendrerit quam bibendum tincidunt ac non lacus. Vivamus ut nisl adipiscing, sollicitudin diam at, hendrerit augue. Cras sagittis velit eu ligula elementum mollis. In feugiat vulputate lectus, ac posuere felis vestibulum nec. Maecenas pharetra nulla vitae ullamcorper commodo. Ut vitae vestibulum nulla. Nunc blandit massa sit amet libero consectetur, sit amet tempor eros laoreet. Donec sit amet elit cursus, malesuada urna a, tincidunt arcu. Vivamus id vulputate nisl. In sapien quam, mollis vitae sem sit amet, gravida placerat sapien. <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">Atlas Mózgu</string>
 	<string name="action_show_diseases">Pokaż listę chorób</string>
     <string name="action_show_parts">Pokaż listę części mózgu</string>
     <string name="action_show_sources">Źródła</string>
-    <string name="action_exit">Wyjście</string>    
-    <string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
+    <string name="action_exit">Wyjście</string><string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
     <string name="s_title">Źródła</string>
     <string name="source_1">\"lorem ipsum l lorem ipsum\" l lorem ipsum l lorem ipsum  - l lorem ipsum l</string>
     <string name="source_2">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
     <string name="source_3">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
     <string name="source_4">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
     <string name="source_5">tyle na chwile obecna starczy?</string>
+    <string name="bp_name">Nazwa części mózgu</string>
+    <string name="bp_desc">Tu będzie znajdować się długi i jakże porywający tekst opisujący daną część mózgu a także jej funkcjonowanie i pochodzenie, wszystko jako jeden baaardzo długi tekst. Ewentualnie z enterami ;)</string>
+    
+    
 	
 
 </resources>
