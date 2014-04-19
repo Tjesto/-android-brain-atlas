@@ -9,24 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".StartActivity" >
 
-    <TextView
-        android:id="@+id/studies_info_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="34dp"
-        android:text="@string/studies_text" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/studies_info_textview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
-        android:src="@drawable/splash_icon" />
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
@@ -43,5 +25,32 @@
         android:layout_toRightOf="@+id/imageView2"
         android:text="@string/app_name"
         android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/splash_icon" />
+
+    <TextView
+        android:id="@+id/studies_info_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="37dp"
+        android:text="@string/studies_text" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="55"
+        android:layout_height="55"
+        android:layout_alignTop="@+id/studies_info_textview"
+        android:layout_toLeftOf="@+id/studies_info_textview"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_pplogo" />
 
 </RelativeLayout>
