@@ -25,6 +25,7 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()) {
 		case R.id.action_show_diseases:
+			showDiseasesListActivity();
 		case R.id.action_show_parts:
 			Toast.makeText(this, "Opcja w trakcie implementacji", Toast.LENGTH_LONG).show();
 			return true;
@@ -39,6 +40,10 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 		}
 	}
 	
+	protected void showDiseasesListActivity() {
+		startActivity(new Intent(this, ListViewActivity.class));	
+	}
+
 	@Override
 	public void onBackPressed() {
 		startActivity(new Intent(this, MainActivity.class));
