@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+   
+    <!-- xml nic nie mogę tu zrobić chciałam tylko dodać tytuł l_title 
+         będzie zależny czy to lista części mózgu czy chorób
+         nadal też nie mam podglądu b_parts i b_disease
+         ale postaram się jak najszybciej dostarczyć choć po jednym bp i bd-->
+
+</ListView>

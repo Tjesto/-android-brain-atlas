@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/bd_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_alignTop="@+id/bd_view"
+         android:text="@string/bd_etymology"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textView2"
+         android:layout_below="@+id/textView2"
+         android:layout_marginTop="10dp"
+         android:text="@string/bd_e_desc" />
+
+     <TextView
+         android:id="@+id/textView4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/bd_view"
+         android:layout_below="@+id/bd_view"
+         android:layout_marginTop="10dp"
+         android:text="@string/bd_symptoms"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textView4"
+         android:layout_below="@+id/textView4"
+         android:layout_marginTop="10dp"
+         android:text="@string/bd_s_desc" />
+
+     <ImageView
+         android:id="@+id/bd_patology_view"
+         android:layout_width="300"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textView5"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/textView5"
+         android:layout_marginTop="10dp"
+         android:layout_marginRight="10dp"
+         android:src="@drawable/ic_launcher" />
+
+     <ImageView
+         android:id="@+id/bd_view"
+         android:layout_width="100"
+         android:layout_height="100"
+         android:layout_below="@+id/textView1"
+         android:layout_marginRight="16dp"
+         android:layout_toLeftOf="@+id/textView2"
+         android:src="@drawable/splash_icon" />
+
+     <TextView
+         android:id="@+id/textView6"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/bd_patology_view"
+         android:layout_below="@+id/bd_patology_view"
+         android:layout_marginTop="10dp"
+         android:text="@string/bd_cure"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView7"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textView6"
+         android:layout_below="@+id/textView6"
+         android:layout_marginTop="10dp"
+         android:text="@string/bd_c_desc" />
+     
+</RelativeLayout>
