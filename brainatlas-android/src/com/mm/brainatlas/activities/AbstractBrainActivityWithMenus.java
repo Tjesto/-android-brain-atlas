@@ -29,7 +29,7 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 			showDiseasesListActivity();
 			return true;
 		case R.id.action_show_parts:
-			Toast.makeText(this, "Opcja w trakcie implementacji", Toast.LENGTH_LONG).show();
+			showBrainPartsActivity();
 			return true;
 		case R.id.action_show_sources:
 			showSourcesActivity();
@@ -42,6 +42,12 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 		}
 	}
 	
+	protected void showBrainPartsActivity() {
+		Intent intent = new Intent(this, ListViewActivity.class);
+		intent.putExtra(DataFactory.GET_ITEMS, DataFactory.PARTS);
+		startActivity(intent);	
+	}
+
 	protected void showDiseasesListActivity() {
 		Intent intent = new Intent(this, ListViewActivity.class);
 		intent.putExtra(DataFactory.GET_ITEMS, DataFactory.DISEASES);

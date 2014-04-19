@@ -12,20 +12,30 @@ import android.widget.ListView;
 public class ListViewActivity extends AbstractBrainActivityWithMenus {
 
 	private ListView listView;
+	private String type;	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list_d_or_p);
 		listView = (ListView) findViewById(R.id.list_d_or_p);
-		String itemsName = getIntent().getStringExtra(DataFactory.GET_ITEMS);
-		List<String> items = DataFactory.createItemsList(this, itemsName);
+		type = getIntent().getStringExtra(DataFactory.GET_ITEMS);
+		List<String> items = DataFactory.createItemsList(this, type);
 		listView.setAdapter(new ArrayAdapter<String>(this, R.layout.single_list_item, items));
-		//listView.setOnItemClickListener(DataFactory.getOnItemClickListener(this, itemsName));
+		//listView.setOnItemClickListener(DataFactory.getOnItemClickListener(this, type));
 	}
 	
 	@Override
 	protected void showDiseasesListActivity() {
-		//doNothing
+		if (type.equals(DataFactory.PARTS)) {
+			super.showBrainPartsActivity();
+		}
+	}
+	
+	@Override
+	protected void showBrainPartsActivity() {
+		if (type.equals(DataFactory.DISEASES)) {
+			super.showBrainPartsActivity();
+		}
 	}
 }
