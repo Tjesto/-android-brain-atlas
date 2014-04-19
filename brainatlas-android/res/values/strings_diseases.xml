@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="bd_aizhalmer">Choroba Aizhalmera</string>
+    <string name="bd_huntington">Choroba Huntingtona</string>
+    <string name="bd_parkinson">Choroba Parkinsona</string>
+    <string name="bd_epilepsy">Epilepsja</string>
+    <string name="bd_tick_borne_encephalitis">Kleszczowe zapalenie mózgu</string>
+    <string name="bd_brain_cancer">Nowotwór mózgu</string>
+    <string name="bd_multiple_sclerosis">Stwardnienie rozsiane</string>
+    <string name="bd_aneurysm">Tętniak mózgu</string>
+    <string name="bd_stroke">Udar mózgu</string>
+    <string name="bd_meningitis">Zapalenie opon mózgowo-rdzeniowych</string>
+</resources>

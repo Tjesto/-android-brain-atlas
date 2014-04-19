@@ -1,5 +1,6 @@
 package com.mm.brainatlas.activities;
 
+import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas_android.R;
 
@@ -26,6 +27,7 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 		switch(item.getItemId()) {
 		case R.id.action_show_diseases:
 			showDiseasesListActivity();
+			return true;
 		case R.id.action_show_parts:
 			Toast.makeText(this, "Opcja w trakcie implementacji", Toast.LENGTH_LONG).show();
 			return true;
@@ -41,7 +43,9 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 	}
 	
 	protected void showDiseasesListActivity() {
-		startActivity(new Intent(this, ListViewActivity.class));	
+		Intent intent = new Intent(this, ListViewActivity.class);
+		intent.putExtra(DataFactory.GET_ITEMS, DataFactory.DISEASES);
+		startActivity(intent);	
 	}
 
 	@Override

@@ -1,6 +1,9 @@
 package com.mm.brainatlas.data;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import com.mm.brainatlas_android.R;
 
 import android.content.Context;
 import android.widget.AdapterView.OnItemClickListener;
@@ -23,15 +26,25 @@ public class DataFactory {
 		return null;
 	}	
 	
-	public static List<String> createItemsList(String itemsName) throws IllegalArgumentException{
+	public static List<String> createItemsList(Context context, String itemsName) throws IllegalArgumentException{
+		List<String> result = new ArrayList<String>();
 		if (itemsName.equals(DISEASES)) {
-			//return list of diseases
+			result.add(context.getText(R.string.bd_aizhalmer).toString());
+			result.add(context.getText(R.string.bd_aneurysm).toString());
+			result.add(context.getText(R.string.bd_brain_cancer).toString());
+			result.add(context.getText(R.string.bd_huntington).toString());
+			result.add(context.getText(R.string.bd_meningitis).toString());
+			result.add(context.getText(R.string.bd_multiple_sclerosis).toString());
+			result.add(context.getText(R.string.bd_parkinson).toString());
+			result.add(context.getText(R.string.bd_stroke).toString());
+			result.add(context.getText(R.string.bd_tick_borne_encephalitis).toString());
 		} else if (itemsName.equals(PARTS)) {
-			//return list of parts
+			result.add("Opcja w trakcie");
+			result.add("implementacji");
 		} else {
 			throw new IllegalArgumentException("Items category not found");
 		}
-		return null;
+		return result;
 	}
 
 }

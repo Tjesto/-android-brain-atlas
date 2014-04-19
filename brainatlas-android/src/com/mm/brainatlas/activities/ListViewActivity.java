@@ -1,6 +1,5 @@
 package com.mm.brainatlas.activities;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.mm.brainatlas.data.DataFactory;
@@ -20,10 +19,7 @@ public class ListViewActivity extends AbstractBrainActivityWithMenus {
 		setContentView(R.layout.list_d_or_p);
 		listView = (ListView) findViewById(R.id.list_d_or_p);
 		String itemsName = getIntent().getStringExtra(DataFactory.GET_ITEMS);
-		List<String> items = new ArrayList<String>();		
-		items.add("Test 1");
-		items.add("Test2");
-		//List<String> items = Utils.createItemsList(itemsName);
+		List<String> items = DataFactory.createItemsList(this, itemsName);
 		listView.setAdapter(new ArrayAdapter<String>(this, R.layout.single_list_item, items));
 		//listView.setOnItemClickListener(DataFactory.getOnItemClickListener(this, itemsName));
 	}
