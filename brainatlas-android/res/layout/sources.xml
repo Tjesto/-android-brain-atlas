@@ -31,7 +31,7 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="10dp"
-        android:text="TextView" />
+        android:text="@string/source_2" />
 
     <TextView
         android:id="@+id/textView4"
@@ -40,6 +40,24 @@
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
         android:layout_marginTop="10dp"
-        android:text="TextView" />
+        android:text="@string/source_3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="10dp"
+        android:text="@string/source_4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="10dp"
+        android:text="@string/source_5" />
 
 </RelativeLayout>

@@ -9,6 +9,10 @@
     <string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
     <string name="s_title">Źródła</string>
     <string name="source_1">\"lorem ipsum l lorem ipsum\" l lorem ipsum l lorem ipsum  - l lorem ipsum l</string>
+    <string name="source_2">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
+    <string name="source_3">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
+    <string name="source_4">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
+    <string name="source_5">tyle na chwile obecna starczy?</string>
 	
 
 </resources>
