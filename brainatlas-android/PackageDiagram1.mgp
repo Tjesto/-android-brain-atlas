@@ -5,6 +5,7 @@
         <DependencyLink destination="com.mm.brainatlas.utils"/>
     </Package>
     <Package name="com.mm.brainatlas.activities" x="437" y="210">
+        <DependencyLink destination="com.mm.brainatlas.data"/>
         <DependencyLink destination="com.mm.brainatlas.services"/>
         <DependencyLink destination="com.mm.brainatlas.utils"/>
     </Package>
@@ -13,7 +14,11 @@
         <DependencyLink destination="com.mm.brainatlas"/>
     </Package>
     <Package name="com.mm.brainatlas.utils" x="333" y="54">
+        <DependencyLink destination="com.mm.brainatlas.data"/>
         <DependencyLink destination="com.mm.brainatlas.activities"/>
     </Package>
     <Package name="com.mm.brainatlas.listeners" x="612" y="59"/>
+    <Package name="com.mm.brainatlas.data" x="676" y="209">
+        <DependencyLink destination="com.mm.brainatlas.utils"/>
+    </Package>
 </PackageAnalysis>

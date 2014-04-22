@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ClassDiagram>
+    <CommunicationClass name="com.mm.brainatlas.data.InfoName" x="270" y="201"/>
+    <CommunicationClass name="com.mm.brainatlas.data.BrainInfo" x="136" y="243"/>
     <CommunicationClass name="com.mm.brainatlas.services.BrainService"
         x="452" y="44">
         <Association
@@ -9,12 +11,32 @@
     </CommunicationClass>
     <CommunicationClass
         name="com.mm.brainatlas.activities.BrainInfoActivity" x="331" y="44"/>
-    <CommunicationClass name="com.mm.brainatlas.utils.StringToLogParser"
-        x="150" y="154"/>
+    <CommunicationClass name="com.mm.brainatlas.data.BrainDiseaseInfo"
+        x="257" y="244">
+        <Extension destinationClassName="com.mm.brainatlas.data.BrainInfo"/>
+    </CommunicationClass>
     <CommunicationClass
         name="com.mm.brainatlas.activities.SourcesActivity" x="372" y="97">
         <Extension destinationClassName="com.mm.brainatlas.activities.AbstractBrainActivityWithMenus"/>
     </CommunicationClass>
+    <CommunicationClass
+        name="com.mm.brainatlas.activities.StartActivity" x="233" y="43"/>
+    <CommunicationClass
+        name="com.mm.brainatlas.activities.ListViewActivity" x="2" y="42">
+        <Extension destinationClassName="com.mm.brainatlas.activities.AbstractBrainActivityWithMenus"/>
+        <Communication destinationClassName="com.mm.brainatlas.data.DataFactory"/>
+    </CommunicationClass>
+    <CommunicationClass name="com.mm.brainatlas.utils.ApplicationLog"
+        x="340" y="153"/>
+    <CommunicationClass
+        name="com.mm.brainatlas.data.NormalBrainPartInfo" x="139" y="304">
+        <Extension destinationClassName="com.mm.brainatlas.data.BrainInfo"/>
+    </CommunicationClass>
+    <CommunicationClass name="com.mm.brainatlas.data.BrainInfo.Type"
+        x="149" y="201"/>
+    <CommunicationClass name="com.mm.brainatlas.utils.StringToLogParser"
+        x="150" y="154"/>
+    <CommunicationClass name="com.mm.brainatlas.data.DataFactory" x="10" y="251"/>
     <CommunicationClass name="com.mm.brainatlas.BrainNotification"
         x="651" y="44">
         <Association
@@ -25,6 +47,10 @@
     <CommunicationClass
         name="com.mm.brainatlas.activities.AbstractBrainActivityWithMenus"
         x="125" y="98"/>
+    <CommunicationClass name="com.mm.brainatlas.data.ShortBrainPartInfo"
+        x="337" y="302">
+        <Extension destinationClassName="com.mm.brainatlas.data.BrainInfo"/>
+    </CommunicationClass>
     <CommunicationClass name="com.mm.brainatlas.activities.MainActivity"
         x="129" y="43">
         <Extension destinationClassName="com.mm.brainatlas.activities.AbstractBrainActivityWithMenus"/>
@@ -32,8 +58,4 @@
     <CommunicationClass name="com.mm.brainatlas.utils.Utils" x="684" y="154">
         <Communication destinationClassName="com.mm.brainatlas.utils.ApplicationLog"/>
     </CommunicationClass>
-    <CommunicationClass
-        name="com.mm.brainatlas.activities.StartActivity" x="233" y="43"/>
-    <CommunicationClass name="com.mm.brainatlas.utils.ApplicationLog"
-        x="340" y="153"/>
 </ClassDiagram>
