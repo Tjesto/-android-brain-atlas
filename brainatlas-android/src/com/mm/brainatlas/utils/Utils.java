@@ -5,6 +5,8 @@ import android.util.Log;
 import com.mm.brainatlas.activities.MainActivity;
 import com.mm.brainatlas.activities.SourcesActivity;
 import com.mm.brainatlas.activities.StartActivity;
+import com.mm.brainatlas.data.BrainInfo.Type;
+import com.mm.brainatlas.data.InfoName;
 
 public class Utils {
 	public static final boolean DEBUG_FLAG = true;
@@ -35,6 +37,16 @@ public class Utils {
 	public static String getNameFromTag(String name) {
 		String[] parts = name.split("\\.");
 		return parts[parts.length - 1];
+	}
+
+	public static int getStringFromName(InfoName name) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static int getStringContentForName(InfoName name, Type type) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 
