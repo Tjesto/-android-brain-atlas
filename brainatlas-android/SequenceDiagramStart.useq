@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.5" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="com.mm.brainatlas.activities.StartActivity" project="brainatlas-android" 
+    file="/brainatlas-android/src/com/mm/brainatlas/activities/StartActivity.java" binary="false" label="startActivity" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="42" y="0"/>    
+    <execution id="2">      
+      <position height="533" width="0" x="0" y="104"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="470" width="0" x="0" y="146"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="21" width="0" x="0" y="198"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="21" width="0" x="0" y="250"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="21" width="0" x="0" y="302"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="21" width="0" x="0" y="396"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="21" width="0" x="0" y="574"/>    
+    </execution>    
+    <execution id="23">      
+      <position height="1320" width="0" x="0" y="642"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="356" width="0" x="0" y="1970"/>    
+    </execution>  
+  </object>  
+  <object id="29" language="java" name="com.mm.brainatlas.activities.MainActivity" project="brainatlas-android" 
+    file="/brainatlas-android/src/com/mm/brainatlas/activities/MainActivity.java" binary="false" label="mainActivity" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="28">      
+      <position height="314" width="0" x="0" y="1991"/>    
+    </execution>    
+    <execution id="31">      
+      <position height="21" width="0" x="0" y="2033"/>    
+    </execution>    
+    <execution id="39">      
+      <position height="21" width="0" x="0" y="2211"/>    
+    </execution>    
+    <execution id="41">      
+      <position height="21" width="0" x="0" y="2263"/>    
+    </execution>  
+  </object>  
+  <object id="42" language="java" name="com.mm.brainatlas.services.BrainService" project="brainatlas-android" 
+    file="/brainatlas-android/src/com/mm/brainatlas/services/BrainService.java" binary="false" label="brainService" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="25">      
+      <position height="1278" width="0" x="0" y="663"/>    
+    </execution>    
+    <execution id="46">      
+      <position height="21" width="0" x="0" y="747"/>    
+    </execution>    
+    <execution id="48">      
+      <position height="943" width="0" x="0" y="799"/>    
+    </execution>    
+    <execution id="56">      
+      <position height="21" width="0" x="0" y="1899"/>    
+    </execution>    
+    <execution id="60">      
+      <position height="21" width="0" x="0" y="935"/>    
+    </execution>  
+  </object>  
+  <object id="63" language="java" name="com.mm.brainatlas.BrainNotification" project="brainatlas-android" 
+    file="/brainatlas-android/src/com/mm/brainatlas/BrainNotification.java" binary="false" label="brainNotification" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="52">      
+      <position height="21" width="0" x="0" y="1794"/>    
+    </execution>    
+    <execution id="54">      
+      <position height="21" width="0" x="0" y="1836"/>    
+    </execution>    
+    <execution id="58">      
+      <position height="63" width="0" x="0" y="830"/>    
+    </execution>    
+    <execution id="62">      
+      <position height="755" width="0" x="0" y="966"/>    
+    </execution>    
+    <execution id="67">      
+      <position height="692" width="0" x="0" y="1008"/>    
+    </execution>    
+    <execution id="69">      
+      <position height="619" width="0" x="0" y="1060"/>    
+    </execution>  
+  </object>  
+  <object id="98" language="java" name="android.graphics.BitmapFactory" project="brainatlas-android" 
+    file="P:/Android/adt-bundle-windows-x86_64-20130522/sdk/platforms/android-19/android.jar" binary="true" 
+    label="&lt;static&gt;" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="71">      
+      <position height="21" width="0" x="0" y="1091"/>    
+    </execution>  
+  </object>  
+  <object id="99" language="java" name="android.content.ContextWrapper" project="brainatlas-android" 
+    file="P:/Android/adt-bundle-windows-x86_64-20130522/sdk/platforms/android-19/android.jar" binary="true" 
+    label="brainService2" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="73">      
+      <position height="21" width="0" x="0" y="1133"/>    
+    </execution>    
+    <execution id="81">      
+      <position height="21" width="0" x="0" y="1301"/>    
+    </execution>  
+  </object>  
+  <object id="100" language="java" name="android.support.v4.app.NotificationCompat.Builder" project="brainatlas-android" 
+    file="P:/BrainAtlas/-android-brain-atlas/brainatlas-android/libs/android-support-v4.jar" binary="true" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="75">      
+      <position height="21" width="0" x="0" y="1175"/>    
+    </execution>    
+    <execution id="77">      
+      <position height="21" width="0" x="0" y="1217"/>    
+    </execution>    
+    <execution id="79">      
+      <position height="21" width="0" x="0" y="1259"/>    
+    </execution>    
+    <execution id="83">      
+      <position height="21" width="0" x="0" y="1343"/>    
+    </execution>    
+    <execution id="87">      
+      <position height="21" width="0" x="0" y="1427"/>    
+    </execution>  
+  </object>  
+  <object id="101" language="java" name="com.mm.brainatlas.utils.Utils" project="brainatlas-android" 
+    file="/brainatlas-android/src/com/mm/brainatlas/utils/Utils.java" binary="false" label="&lt;static&gt;" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="85">      
+      <position height="21" width="0" x="0" y="1385"/>    
+    </execution>    
+    <execution id="91">      
+      <position height="21" width="0" x="0" y="1511"/>    
+    </execution>  
+  </object>  
+  <object id="102" language="java" name="android.app.PendingIntent" project="brainatlas-android" 
+    file="P:/Android/adt-bundle-windows-x86_64-20130522/sdk/platforms/android-19/android.jar" binary="true" 
+    label="&lt;static&gt;" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="93">      
+      <position height="21" width="0" x="0" y="1553"/>    
+    </execution>  
+  </object>  
+  <object id="103" language="java" name="android.support.v4.app.NotificationCompat.Builder" project="brainatlas-android" 
+    file="P:/BrainAtlas/-android-brain-atlas/brainatlas-android/libs/android-support-v4.jar" binary="true" 
+    label="builder" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="95">      
+      <position height="21" width="0" x="0" y="1595"/>    
+    </execution>    
+    <execution id="97">      
+      <position height="21" width="0" x="0" y="1637"/>    
+    </execution>  
+  </object>  
+  <object id="104" language="java" name="android.content.ContextWrapper" project="brainatlas-android" 
+    file="P:/Android/adt-bundle-windows-x86_64-20130522/sdk/platforms/android-19/android.jar" binary="true" 
+    label="brainService1" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="65">      
+      <position height="21" width="0" x="0" y="851"/>    
+    </execution>  
+  </object>  
+  <object id="105" language="java" name="android.widget.TextView" project="brainatlas-android" 
+    file="P:/Android/adt-bundle-windows-x86_64-20130522/sdk/platforms/android-19/android.jar" binary="true" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="12">      
+      <position height="21" width="0" x="0" y="333"/>    
+    </execution>  
+  </object>  
+  <object id="106" language="java" name="android.widget.TextView" project="brainatlas-android" 
+    file="P:/Android/adt-bundle-windows-x86_64-20130522/sdk/platforms/android-19/android.jar" binary="true" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="16">      
+      <position height="21" width="0" x="0" y="427"/>    
+    </execution>  
+  </object>  
+  <object id="107" language="java" name="android.content.Intent" project="brainatlas-android" 
+    file="P:/Android/adt-bundle-windows-x86_64-20130522/sdk/platforms/android-19/android.jar" binary="true" 
+    label="intent" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="18">      
+      <position height="21" width="0" x="0" y="469"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="21" width="0" x="0" y="511"/>    
+    </execution>    
+    <execution id="44">      
+      <position height="21" width="0" x="0" y="684"/>    
+    </execution>    
+    <execution id="50">      
+      <position height="21" width="0" x="0" y="1752"/>    
+    </execution>    
+    <execution id="89">      
+      <position height="21" width="0" x="0" y="1469"/>    
+    </execution>    
+    <execution id="33">      
+      <position height="21" width="0" x="0" y="2064"/>    
+    </execution>    
+    <execution id="35">      
+      <position height="21" width="0" x="0" y="2106"/>    
+    </execution>    
+    <execution id="37">      
+      <position height="21" width="0" x="0" y="2148"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="onCreate(android.os.Bundle):void">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="onCreate(android.os.Bundle):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="setContentView(int):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="findViewById(int):android.view.View">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="setVisibility(int):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="findViewById(int):android.view.View">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="setVisibility(int):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="Intent(android.content.Context,java.lang.Class&lt;?&gt;)">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="setAction(java.lang.String):android.content.Intent">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="startService(android.content.Intent):android.content.ComponentName">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="24" operation="onStartCommand(android.content.Intent,int,int):int">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>  
+  <message id="27" operation="onCreate(android.os.Bundle):void">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="30" operation="onCreate(android.os.Bundle):void">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="31"/>  
+  </message>  
+  <message id="32" operation="Intent(android.content.Context,java.lang.Class&lt;?&gt;)">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="33"/>  
+  </message>  
+  <message id="34" operation="putExtra(java.lang.String,java.lang.String):android.content.Intent">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="35"/>  
+  </message>  
+  <message id="36" operation="setAction(java.lang.String):android.content.Intent">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="37"/>  
+  </message>  
+  <message id="38" operation="startService(android.content.Intent):android.content.ComponentName">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="39"/>  
+  </message>  
+  <message id="40" operation="setContentView(int):void">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="41"/>  
+  </message>  
+  <message id="43" operation="getAction():java.lang.String">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="44"/>  
+  </message>  
+  <message id="45" operation="onStartCommand(android.content.Intent,int,int):int">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="46"/>  
+  </message>  
+  <message id="47" operation="initializeService():void">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="48"/>  
+  </message>  
+  <message id="49" operation="getStringExtra(java.lang.String):java.lang.String">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="50"/>  
+  </message>  
+  <message id="51" operation="update(java.lang.String):void">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="52"/>  
+  </message>  
+  <message id="53" operation="cancel():void">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="54"/>  
+  </message>  
+  <message id="55" operation="stopSelf():void">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="56"/>  
+  </message>  
+  <message id="57" operation="BrainNotification(com.mm.brainatlas.services.BrainService)">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="58"/>  
+  </message>  
+  <message id="59" operation="startForeground(int,android.app.Notification):void">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="60"/>  
+  </message>  
+  <message id="61" operation="getNotification():android.app.Notification">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="62"/>  
+  </message>  
+  <message id="64" operation="getSystemService(java.lang.String):java.lang.Object">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="65"/>  
+  </message>  
+  <message id="66" operation="getNotification(java.lang.String):android.app.Notification">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="67"/>  
+  </message>  
+  <message id="68" operation="buildNotification(java.lang.String):android.app.Notification">    
+    <end type="SOURCE" refId="67"/>    
+    <end type="TARGET" refId="69"/>  
+  </message>  
+  <message id="70" operation="decodeResource(android.content.res.Resources,int):android.graphics.Bitmap">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="71"/>  
+  </message>  
+  <message id="72" operation="getResources():android.content.res.Resources">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="73"/>  
+  </message>  
+  <message id="74" operation="Builder(android.content.Context)">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="75"/>  
+  </message>  
+  <message id="76" operation="setSmallIcon(int):android.support.v4.app.NotificationCompat.Builder">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="77"/>  
+  </message>  
+  <message id="78" operation="setLargeIcon(android.graphics.Bitmap):android.support.v4.app.NotificationCompat.Builder">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="79"/>  
+  </message>  
+  <message id="80" operation="getText(int):java.lang.CharSequence">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="81"/>  
+  </message>  
+  <message id="82" operation="setContentTitle(java.lang.CharSequence):android.support.v4.app.NotificationCompat.Builder">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="83"/>  
+  </message>  
+  <message id="84" operation="getNameFromTag(java.lang.String):java.lang.String">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="85"/>  
+  </message>  
+  <message id="86" operation="setContentText(java.lang.CharSequence):android.support.v4.app.NotificationCompat.Builder">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="87"/>  
+  </message>  
+  <message id="88" operation="Intent(android.content.Context,java.lang.Class&lt;?&gt;)">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="89"/>  
+  </message>  
+  <message id="90" operation="getActivityFromNameRef(java.lang.String):java.lang.Class&lt;?&gt;">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="91"/>  
+  </message>  
+  <message id="92" 
+    operation="getActivity(android.content.Context,int,android.content.Intent,int):android.app.PendingIntent">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="93"/>  
+  </message>  
+  <message id="94" 
+    operation="setContentIntent(android.app.PendingIntent):android.support.v4.app.NotificationCompat.Builder">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="95"/>  
+  </message>  
+  <message id="96" operation="build():android.app.Notification">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="97"/>  
+  </message>
+</sequence-diagram>

@@ -5,8 +5,6 @@ import android.util.Log;
 import com.mm.brainatlas.activities.MainActivity;
 import com.mm.brainatlas.activities.SourcesActivity;
 import com.mm.brainatlas.activities.StartActivity;
-import com.mm.brainatlas.data.BrainInfo.Type;
-import com.mm.brainatlas.data.InfoName;
 
 public class Utils {
 	public static final boolean DEBUG_FLAG = true;
@@ -14,13 +12,13 @@ public class Utils {
 	
 	public static Class<?> getActivityFromName(String activityName) {
 		Class<?> result = null;
-		if (StartActivity.TAG.contains(activityName)) {
+		/*if (StartActivity.TAG.contains(activityName)) {
 			result = StartActivity.class;
 		} else if (MainActivity.TAG.contains(activityName)) {
 			result = MainActivity.class;
 		} else if (SourcesActivity.TAG.contains(activityName)) {
 			result = SourcesActivity.class;
-		}
+		}*/
 		return result;
 	}
 	
@@ -39,12 +37,12 @@ public class Utils {
 		return parts[parts.length - 1];
 	}
 
-	public static int getStringFromName(InfoName name) {
+	public static int getStringFromName(String name) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	public static int getStringContentForName(InfoName name, Type type) {
+	public static int getContentStringFromName(String name, int paragraph) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

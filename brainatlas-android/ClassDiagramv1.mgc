@@ -1,187 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ClassDiagram>
-    <Class name="com.mm.brainatlas.data.InfoName" x="186" y="303">
+    <Class name="com.mm.brainatlas.data.BrainInfo" x="1008" y="193">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
     </Class>
-    <Class name="com.mm.brainatlas.data.BrainInfo" x="298" y="274">
+    <Class name="com.mm.brainatlas.activities.BrainInfoActivity" x="46" y="64">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
     </Class>
-    <Class name="com.mm.brainatlas.activities.BrainInfoActivity" x="41" y="9">
+    <Class name="com.mm.brainatlas.services.BrainService" x="11" y="355">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-    </Class>
-    <Class name="com.mm.brainatlas.services.BrainService" x="15" y="174">
-        <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
-        <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
         <Association
             destinationClassName="com.mm.brainatlas.BrainNotification"
-            endpointName="brainNotification" kind="Simple">
-            <Point x="302" y="229"/>
-        </Association>
+            endpointName="brainNotification" kind="Simple"/>
         <Communication destinationClassName="com.mm.brainatlas.BrainNotification"/>
     </Class>
-    <Class name="com.mm.brainatlas.data.BrainDiseaseInfo" x="222" y="402">
+    <Class name="com.mm.brainatlas.data.BrainDiseaseInfo" x="618" y="581">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-        <Extension destinationClassName="com.mm.brainatlas.data.BrainInfo"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="true"/>
+        <Extension destinationClassName="com.mm.brainatlas.data.BrainInfoLong"/>
     </Class>
-    <Class name="com.mm.brainatlas.activities.SourcesActivity" x="420" y="119">
+    <Class name="com.mm.brainatlas.activities.SourcesActivity" x="457" y="206">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
         <Extension destinationClassName="com.mm.brainatlas.activities.AbstractBrainActivityWithMenus"/>
     </Class>
-    <Class name="com.mm.brainatlas.activities.StartActivity" x="591" y="-4">
+    <Class name="com.mm.brainatlas.activities.StartActivity" x="586" y="6">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
     </Class>
-    <Class name="com.mm.brainatlas.activities.ListViewActivity" x="81" y="84">
+    <Class name="com.mm.brainatlas.activities.ListViewActivity" x="27" y="200">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
         <Extension destinationClassName="com.mm.brainatlas.activities.AbstractBrainActivityWithMenus"/>
         <Communication destinationClassName="com.mm.brainatlas.data.DataFactory"/>
     </Class>
-    <Class name="com.mm.brainatlas.utils.ApplicationLog" x="719" y="156">
+    <Class name="com.mm.brainatlas.data.BrainInfoLong" x="690" y="319">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-    </Class>
-    <Class name="com.mm.brainatlas.data.NormalBrainPartInfo" x="435" y="409">
-        <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
-        <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
         <Extension destinationClassName="com.mm.brainatlas.data.BrainInfo"/>
     </Class>
-    <Class name="com.mm.brainatlas.data.BrainInfo.Type" x="298" y="274">
+    <Class name="com.mm.brainatlas.utils.ApplicationLog" x="1294" y="202">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
     </Class>
-    <Class name="com.mm.brainatlas.utils.StringToLogParser" x="674" y="196">
+    <Class name="com.mm.brainatlas.data.NormalBrainPartInfo" x="856" y="585">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="true"/>
+        <Extension destinationClassName="com.mm.brainatlas.data.BrainInfoLong"/>
     </Class>
-    <Class name="com.mm.brainatlas.data.DataFactory" x="73" y="300">
+    <Class name="com.mm.brainatlas.utils.StringToLogParser" x="863" y="44">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
     </Class>
-    <Class name="com.mm.brainatlas.BrainNotification" x="384" y="170">
+    <Class name="com.mm.brainatlas.BrainNotification" x="385" y="356">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
         <Association
             destinationClassName="com.mm.brainatlas.services.BrainService"
             endpointName="brainService" kind="Simple">
-            <Point x="302" y="186"/>
+            <Point x="320" y="401"/>
         </Association>
         <Communication destinationClassName="com.mm.brainatlas.utils.Utils"/>
     </Class>
+    <Class name="com.mm.brainatlas.data.DataFactory" x="1162" y="60">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
+    </Class>
     <Class
         name="com.mm.brainatlas.activities.AbstractBrainActivityWithMenus"
-        x="239" y="-5">
+        x="239" y="14">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
     </Class>
-    <Class name="com.mm.brainatlas.data.ShortBrainPartInfo" x="621" y="415">
+    <Class name="com.mm.brainatlas.activities.MainActivity" x="296" y="211">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-        <Extension destinationClassName="com.mm.brainatlas.data.BrainInfo"/>
-    </Class>
-    <Class name="com.mm.brainatlas.activities.MainActivity" x="222" y="120">
-        <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
-        <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
         <Extension destinationClassName="com.mm.brainatlas.activities.AbstractBrainActivityWithMenus"/>
     </Class>
-    <Class name="com.mm.brainatlas.utils.Utils" x="678" y="158">
+    <Class name="com.mm.brainatlas.data.ShortBrainPartInfo" x="1031" y="370">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
+            default-accepted="true" static-accepted="true"/>
         <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="true"/>
+        <Extension destinationClassName="com.mm.brainatlas.data.BrainInfo"/>
+    </Class>
+    <Class name="com.mm.brainatlas.utils.Utils" x="709" y="132">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="true"/>
         <Communication destinationClassName="com.mm.brainatlas.utils.ApplicationLog"/>
     </Class>
 </ClassDiagram>
