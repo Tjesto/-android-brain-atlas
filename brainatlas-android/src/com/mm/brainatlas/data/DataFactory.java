@@ -1,5 +1,6 @@
 package com.mm.brainatlas.data;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,23 +29,37 @@ public class DataFactory {
 	
 	public static List<String> createItemsList(Context context, String itemsName) throws IllegalArgumentException{
 		List<String> result = new ArrayList<String>();
+		String type = "";
 		if (itemsName.equals(DISEASES)) {
-			result.add(context.getText(R.string.bd_aizhalmer).toString());
-			result.add(context.getText(R.string.bd_aneurysm).toString());
-			result.add(context.getText(R.string.bd_brain_cancer).toString());
-			result.add(context.getText(R.string.bd_huntington).toString());
-			result.add(context.getText(R.string.bd_meningitis).toString());
-			result.add(context.getText(R.string.bd_multiple_sclerosis).toString());
-			result.add(context.getText(R.string.bd_parkinson).toString());
-			result.add(context.getText(R.string.bd_stroke).toString());
-			result.add(context.getText(R.string.bd_tick_borne_encephalitis).toString());
+			type = "bd_";
 		} else if (itemsName.equals(PARTS)) {
-			result.add("Opcja w trakcie");
-			result.add("implementacji");
+			type = "bp_";
 		} else {
 			throw new IllegalArgumentException("Items category not found");
 		}
+		Class<?> rStringClass = R.string.class;
+		for (Field f : rStringClass.getFields()) {
+			if (f.getName().contains(type) && f.getName().contains("_name")
+					&& !f.getName().contains(type + "name")) {
+				int resId = -1;
+				try {
+					resId = f.getInt(rStringClass);
+					result.add(context.getText(resId).toString());
+				} catch (IllegalAccessException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+		}
 		return result;
+	}
+
+	public static int getTitleForType(String type) {
+		if (type.equals(DISEASES)) {
+			return R.string.bd_title;
+		}
+		return R.string.bp_title;
 	}
 
 }

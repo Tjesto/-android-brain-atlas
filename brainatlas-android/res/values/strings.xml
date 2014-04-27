@@ -20,6 +20,8 @@
     <string name="bd_s_desc">A tu będzie jakże porywający opis objawów zapewne długi</string>
     <string name="bd_cure">Zapobieganie i leczenie</string>
     <string name="bd_c_desc">Opis sposobów leczenia i zapobiegania też zapewne długi</string>
+    <string name="bd_title">Lista chorób</string>
+    <string name="bp_title">Lista części mózgu</string>
     
     
 	

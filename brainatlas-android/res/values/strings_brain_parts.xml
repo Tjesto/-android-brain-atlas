@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 1. Części mózgu widoczne z rzutu z zewnątrz: -->
+		<string name="bp_plat_czolowy_name">płat czołowy</string>
+<string name="bp_plat_skroniowy_name">płat skroniowy</string>
+		<string name="bp_plat_ciemieniowy_name">płat ciemieniowy</string>
+		<string name="bp_plat_potyliczny">płat potyliczny</string>
+		<string name="bp_mozdzek_name">móżdżek</string>
+		<string name="bp_rdzen_przedluzony_name">rdzeń przedłużony</string>
+	<!-- 2.  Części mózgu widoczne na przekroju podłużnym: -->
+		<string name="bp_kora_mozgowa_name">kora mózgowa</string>
+		<string name="bp_cialo_modzelowate_name">ciało modzelowate</string>
+		<string name="bp_jadro_pollezoce_name">jądro półleżące</string>
+		<string name="bp_wzgorze_name">wzgórze</string>
+		<string name="bp_podwzgorze_name">podwzgórze</string>
+		<string name="bp_przysadka_mozgowa_name">przysadka mózgowa</string>
+		<string name="bp_cialo_migdalowate">ciało migdałowate</string>
+		<string name="bp_hipokamp_name">hipokamp</string>	
+    
+</resources>
