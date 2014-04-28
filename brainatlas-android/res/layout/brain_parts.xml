@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/bp_textview_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -14,24 +14,24 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
-        android:id="@+id/bd_view"
+        android:id="@+id/bp_imageview"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="10dp"
+        android:layout_below="@+id/bp_textview_1"
         android:layout_marginLeft="10dp"
-        android:src="@drawable/splash_icon" 
-        android:contentDescription="@string/info_picture"/>
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/info_picture"
+        android:src="@drawable/splash_icon" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/bp_textview_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/bd_view"
+        android:layout_alignTop="@+id/bp_imageview"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/bd_view"
+        android:layout_toRightOf="@+id/bp_imageview"
         android:text="@string/bp_desc" />
 
 </RelativeLayout>
