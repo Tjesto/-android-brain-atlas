@@ -4,6 +4,8 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mm.brainatlas.activities.BrainDiseaseActivity;
+import com.mm.brainatlas.activities.BrainPartInfoActivity;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
@@ -65,8 +67,15 @@ public class DataFactory {
 		return R.string.bp_title;
 	}
 
-	public static NormalBrainPartInfo getInfoForClass(String tag) {
-		return null;
+	public static BrainInfoLong getInfoForClass(Context context, String tag, String infoSubject) {
+		BrainInfoLong result = null;
+		if (tag.contains("BrainPartInfoActivity")) {
+			result = new NormalBrainPartInfo(context, infoSubject);
+			//TODO: fill with data;
+		} else if (tag.contains("BrainDiseaseActivity")) {
+			result = new BrainDiseaseInfo(context, infoSubject);
+		}
+		return result;
 	}	
 
 }

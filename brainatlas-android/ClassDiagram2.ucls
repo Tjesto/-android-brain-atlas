@@ -67,7 +67,7 @@
   <class id="8" language="java" name="com.mm.brainatlas.BrainNotification" project="brainatlas-android" 
     file="/brainatlas-android/src/com/mm/brainatlas/BrainNotification.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="213" y="722"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -94,7 +94,7 @@
   <class id="11" language="java" name="com.mm.brainatlas.utils.Utils" project="brainatlas-android" 
     file="/brainatlas-android/src/com/mm/brainatlas/utils/Utils.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="227" y="398"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -111,17 +111,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="com.mm.brainatlas.activities.BrainInfoActivity" project="brainatlas-android" 
-    file="/brainatlas-android/src/com/mm/brainatlas/activities/BrainInfoActivity.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1674" y="962"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
-      visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="14" language="java" name="com.mm.brainatlas.activities.ListViewActivity" project="brainatlas-android" 
+  <class id="13" language="java" name="com.mm.brainatlas.activities.ListViewActivity" project="brainatlas-android" 
     file="/brainatlas-android/src/com/mm/brainatlas/activities/ListViewActivity.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1570" y="724"/>    
@@ -131,143 +121,221 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="com.mm.brainatlas.activities.MainActivity" project="brainatlas-android" 
+  <class id="14" language="java" name="com.mm.brainatlas.activities.MainActivity" project="brainatlas-android" 
     file="/brainatlas-android/src/com/mm/brainatlas/activities/MainActivity.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="965" y="963"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="com.mm.brainatlas.activities.SourcesActivity" project="brainatlas-android" 
+  <class id="15" language="java" name="com.mm.brainatlas.activities.SourcesActivity" project="brainatlas-android" 
     file="/brainatlas-android/src/com/mm/brainatlas/activities/SourcesActivity.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1309" y="970"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="com.mm.brainatlas.activities.StartActivity" project="brainatlas-android" 
+  <class id="16" language="java" name="com.mm.brainatlas.activities.StartActivity" project="brainatlas-android" 
     file="/brainatlas-android/src/com/mm/brainatlas/activities/StartActivity.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="593" y="986"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="18">    
-    <end type="SOURCE" refId="15"/>    
+  <class id="17" language="java" name="com.mm.brainatlas.activities.BrainPartInfoActivity" project="brainatlas-android" 
+    file="/brainatlas-android/src/com/mm/brainatlas/activities/BrainPartInfoActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1677" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="com.mm.brainatlas.activities.BrainInfoActivity" project="brainatlas-android" 
+    file="/brainatlas-android/src/com/mm/brainatlas/activities/BrainInfoActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1385" y="390"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="com.mm.brainatlas.activities.BrainDiseaseActivity" project="brainatlas-android" 
+    file="/brainatlas-android/src/com/mm/brainatlas/activities/BrainDiseaseActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1800" y="563"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="20">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="12"/>  
   </generalization>  
-  <dependency id="19">    
+  <dependency id="22">    
     <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="15"/>  
+    <end type="TARGET" refId="14"/>  
   </dependency>  
-  <generalization id="20">    
+  <generalization id="23">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="24">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <generalization id="21">    
-    <end type="SOURCE" refId="16"/>    
+  <dependency id="25">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <generalization id="26">    
+    <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="12"/>  
   </generalization>  
-  <association id="22">    
+  <association id="27">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="23" name="brainNotification"/>      
-      <multiplicity id="24" minimum="0" maximum="1"/>    
+      <attribute id="28" name="brainNotification"/>      
+      <multiplicity id="29" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="25">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="26">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <dependency id="27">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="28">    
+  <dependency id="30">    
     <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="7"/>  
   </dependency>  
-  <generalization id="29">    
-    <end type="SOURCE" refId="14"/>    
+  <dependency id="31">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <association id="34">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="35" name="brainInfo"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="12"/>  
   </generalization>  
-  <realization id="30">    
+  <dependency id="39">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="40">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <realization id="41">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
-  <dependency id="31">    
-    <end type="SOURCE" refId="14"/>    
+  <dependency id="42">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="4"/>  
   </dependency>  
-  <dependency id="32">    
+  <generalization id="44">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <dependency id="45">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="11"/>  
   </dependency>  
-  <dependency id="33">    
+  <dependency id="46">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="11"/>  
   </dependency>  
-  <realization id="34">    
+  <dependency id="47">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <realization id="48">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
-  <dependency id="35">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="15"/>  
+  <dependency id="49">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="14"/>  
   </dependency>  
-  <dependency id="36">    
+  <dependency id="50">    
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="11"/>  
   </dependency>  
-  <dependency id="37">    
-    <end type="SOURCE" refId="17"/>    
+  <dependency id="51">    
+    <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="7"/>  
   </dependency>  
-  <dependency id="38">    
+  <dependency id="52">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="53">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="54">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="11"/>  
   </dependency>  
-  <dependency id="39">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="14"/>  
-  </dependency>  
-  <dependency id="40">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="16"/>  
-  </dependency>  
-  <generalization id="41">    
+  <generalization id="55">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <association id="42">    
+  <generalization id="56">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <dependency id="57">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="58">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="43" name="brainService"/>      
-      <multiplicity id="44" minimum="0" maximum="1"/>    
+      <attribute id="59" name="brainService"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="45">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="46">    
+  <dependency id="61">    
     <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="4"/>  
   </dependency>  
-  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
     <operations public="true" package="true" protected="true" private="true" static="true"/>  

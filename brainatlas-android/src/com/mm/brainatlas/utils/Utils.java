@@ -46,6 +46,13 @@ public class Utils {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	public static boolean isEmptyOrNull(String string) {
+		if (string == null || string.isEmpty() || string.equals("") || string.length() < 1) {
+			return true;
+		}
+		return false;
+	}
 	
 
 }
