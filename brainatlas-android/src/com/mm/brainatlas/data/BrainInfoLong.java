@@ -20,10 +20,26 @@ public abstract class BrainInfoLong implements BrainInfo{
 	
 	//TODO getters
 	@Override
-	public String generateContent(String name, int paragraph) {
-		String contentPart = context.getText(Utils.getContentStringFromName(name, paragraph)).toString();
-		paragraphs.put(paragraph, contentPart);
-		return null;
+	public String getContent(int paragraph) {
+		return paragraphs.get(paragraph, S_NOT_FOUND);
 	}
 	
+	@Override
+	public int getImage(int imageNum) {
+		return images.get(imageNum, I_NOT_FOUND);
+	}
+	
+	@Override
+	public String getName() {
+		return name;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder(name);
+		builder.append('\n');
+		builder.append("Paragraphs number: ");
+		builder.append(paragraphs.size()).append(";images number").append(images.size());
+		return builder.toString();
+	}
 }

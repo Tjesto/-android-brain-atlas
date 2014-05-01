@@ -3,6 +3,7 @@ package com.mm.brainatlas.activities;
 import java.util.List;
 
 import com.mm.brainatlas.data.DataFactory;
+import com.mm.brainatlas.listeners.OnListItemClickListener;
 import com.mm.brainatlas_android.R;
 
 import android.content.Intent;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ListViewActivity extends AbstractBrainActivityWithMenus {
 
@@ -25,7 +27,7 @@ public class ListViewActivity extends AbstractBrainActivityWithMenus {
 		((TextView) findViewById(R.id.l_title)).setText(DataFactory.getTitleForType(type));
 		List<String> items = DataFactory.createItemsList(this, type);
 		listView.setAdapter(new ArrayAdapter<String>(this, R.layout.single_list_item, items));
-		//listView.setOnItemClickListener(DataFactory.getOnItemClickListener(this, type));
+		listView.setOnItemClickListener(new OnListItemClickListener(this, type));
 	}
 	
 	@Override

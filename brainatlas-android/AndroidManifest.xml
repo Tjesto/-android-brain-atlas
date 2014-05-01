@@ -32,6 +32,12 @@
         <activity 
             android:name="com.mm.brainatlas.activities.ListViewActivity" 
             android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
+        <activity 
+            android:name="com.mm.brainatlas.activities.BrainPartInfoActivity" 
+            android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
+        <activity 
+            android:name="com.mm.brainatlas.activities.BrainDiseaseActivity" 
+            android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
         <service android:name="com.mm.brainatlas.services.BrainService" />
     </application>
 

@@ -1,10 +1,13 @@
 package com.mm.brainatlas.utils;
 
+import java.lang.reflect.Field;
+
 import android.util.Log;
 
 import com.mm.brainatlas.activities.MainActivity;
 import com.mm.brainatlas.activities.SourcesActivity;
 import com.mm.brainatlas.activities.StartActivity;
+import com.mm.brainatlas_android.R;
 
 public class Utils {
 	public static final boolean DEBUG_FLAG = true;
@@ -38,12 +41,19 @@ public class Utils {
 	}
 
 	public static int getStringFromName(String name) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public static int getContentStringFromName(String name, int paragraph) {
-		// TODO Auto-generated method stub
+		Class<?> refRString = R.string.class;
+		String infoName = normalizeName(name);
+		for (Field f : refRString.getFields()) {
+			if (f.getName().contains(infoName + "_name")){
+				try {
+					return f.getInt(refRString);
+				} catch (IllegalAccessException e) {
+					e.printStackTrace();
+				} catch (IllegalArgumentException e) {
+					e.printStackTrace();
+				}
+			}				
+		}
 		return 0;
 	}
 

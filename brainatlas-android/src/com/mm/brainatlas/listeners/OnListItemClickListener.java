@@ -1,6 +1,7 @@
 package com.mm.brainatlas.listeners;
 
 import com.mm.brainatlas.activities.BrainDiseaseActivity;
+import com.mm.brainatlas.activities.BrainInfoActivity;
 import com.mm.brainatlas.activities.BrainPartInfoActivity;
 import com.mm.brainatlas.activities.ListViewActivity;
 import com.mm.brainatlas.data.DataFactory;
@@ -29,7 +30,7 @@ public class OnListItemClickListener implements OnItemClickListener {
 		Intent intent = new Intent(activity,
 				(type.equals(DataFactory.PARTS) ? BrainPartInfoActivity.class
 						: BrainDiseaseActivity.class));
-		intent.putExtra(DataFactory.ITEM_NAME, normalizedName);		
+		intent.putExtra(BrainInfoActivity.INFO_TYPE, normalizedName);		
 		activity.startBrainInfoActivity(intent);
 		
 	}

@@ -1,8 +1,12 @@
 package com.mm.brainatlas.data;
 
 public interface BrainInfo {
+	
+	public final static String S_NOT_FOUND = "string_not_found";
+	public final static int I_NOT_FOUND = -1;
 
-	String genrateName(int infoId);
-	String generateContent(String name, int paragraph);
-	int generateImage(String name, int imageNum);
+	String getName();
+	String getContent(int paragraph);
+	int getImage(int imageNum);
+	void generateAllContent(String name);
 }

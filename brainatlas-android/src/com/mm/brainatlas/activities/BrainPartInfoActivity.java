@@ -20,7 +20,7 @@ public class BrainPartInfoActivity extends BrainInfoActivity {
 			infoSubject = UNKNOWN_INFO;
 		}
 		brainInfo = DataFactory.getInfoForClass(this, TAG, infoSubject);
-		
+		matchLayoutPartsWithData();
 	}
 
 }

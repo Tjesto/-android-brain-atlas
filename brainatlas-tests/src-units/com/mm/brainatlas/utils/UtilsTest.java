@@ -87,6 +87,7 @@ public class UtilsTest {
 		assertEquals(normalized1, Utils.normalizeName(toNormalize1));
 		assertEquals(normalized2, Utils.normalizeName(toNormalize2));
 		assertEquals(normalized3, Utils.normalizeName(toNormalize3));
+		assertEquals(normalized1, Utils.normalizeName(normalized1));
 	}
 	
 	

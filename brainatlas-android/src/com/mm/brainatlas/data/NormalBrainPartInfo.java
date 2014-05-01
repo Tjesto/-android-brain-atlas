@@ -9,15 +9,9 @@ public class NormalBrainPartInfo extends BrainInfoLong {
 	}
 
 	@Override
-	public String genrateName(int infoId) {
+	public void generateAllContent(String name) {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int generateImage(String name, int imageNum) {
-		// TODO Auto-generated method stub
-		return 0;
+		
 	}		
 
 }
