@@ -54,5 +54,45 @@ public class Utils {
 		return false;
 	}
 	
+	public static int getViewNumFromString(String name) throws IllegalStringFormatException{
+		String[] vals = name.split("__");
+		int result = -1;
+		try {
+			result = Integer.parseInt(vals[1]);
+		} catch (Exception e) {
+			throw new IllegalStringFormatException();
+		}
+		
+		return result;
+	}
+
+	public static String normalizeName(String chosenName) {
+		StringBuilder builder = new StringBuilder();
+		for (Character c : chosenName.toLowerCase().toCharArray()) {
+			if (c.equals('¹')) {
+				builder.append('a');
+			} else if (c.equals('æ')) {
+				builder.append('c');
+			} else if (c.equals('ê')){
+				builder.append('e');
+			} else if (c.equals('³')) {
+				builder.append('l');
+			} else if (c.equals('ñ')) {
+				builder.append('n');
+			} else if (c.equals('ó')) {
+				builder.append('o');
+			} else if (c.equals('œ')) {
+				builder.append('s');
+			} else if (c.equals('Ÿ') || c.equals('¿')) {
+				builder.append('z');
+			} else if (c.equals(' ')) {
+				builder.append('_');
+			} else {
+				builder.append(c);
+			}
+		}
+		return builder.toString();
+	}
+	
 
 }

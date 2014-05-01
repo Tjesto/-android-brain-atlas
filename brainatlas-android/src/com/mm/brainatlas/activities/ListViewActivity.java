@@ -5,6 +5,7 @@ import java.util.List;
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas_android.R;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -39,5 +40,10 @@ public class ListViewActivity extends AbstractBrainActivityWithMenus {
 		if (type.equals(DataFactory.DISEASES)) {
 			super.showBrainPartsActivity();
 		}
+	}
+
+	public void startBrainInfoActivity(Intent intent) {
+		startActivity(intent);
+		finish();
 	}
 }

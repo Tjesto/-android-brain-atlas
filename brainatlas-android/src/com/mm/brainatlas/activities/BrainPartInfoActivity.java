@@ -19,7 +19,7 @@ public class BrainPartInfoActivity extends BrainInfoActivity {
 		if (Utils.isEmptyOrNull(infoSubject)) {
 			infoSubject = UNKNOWN_INFO;
 		}
-		brainInfo = DataFactory.getInfoForClass(TAG, infoSubject);
+		brainInfo = DataFactory.getInfoForClass(this, TAG, infoSubject);
 		
 	}
 

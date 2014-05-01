@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- <string name="bp_nazwaBezPolskichZnakowRozdzielonaPodkresleniem__numertextViewWKtorymMaBycWyswietlone">Jakiś tekst</string> 
+    	 Nazwy zdjęć do umieszczenia w aplikacji nazywamy zgodnie ze schematem: bp_nazwaBezPolskichZnakowRozdzielonaPodkresleniem__numerImageViewKtroreToWyswietla 
+    	 UWAGA! nazwa choroby/części mózgu od numeru wyświetlającego ją textView/ImageView oddzielona jest dwoma znakami "_"
+    	 UWAGA2! przykładowe nazwy dotyczą części mózgu, stąd rozpoczynają się kodem bp_, nazwy zasobów dla chorób rozpoczynają się kodem bd_
+    	 
+    	 Zgodność nazw z tym schematem pozwolą na dynamiczne tworzenie klas z danymi -->    
+</resources>

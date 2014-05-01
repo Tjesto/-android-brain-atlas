@@ -18,6 +18,7 @@ public class DataFactory {
 	public static final String GET_ITEMS = "items_to_get";
 	public static final String DISEASES = "diseases";
 	public static final String PARTS = "parts";
+	public static final String ITEM_NAME = "name_of_item";
 
 	public static OnItemClickListener getOnItemClickListener(
 			Context context, String itemsName) {
@@ -74,7 +75,9 @@ public class DataFactory {
 			//TODO: fill with data;
 		} else if (tag.contains("BrainDiseaseActivity")) {
 			result = new BrainDiseaseInfo(context, infoSubject);
+			//TODO: fill with data;
 		}
+		
 		return result;
 	}	
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="bd_aizhalmer_name">Choroba Aizhalmera</string>
-    <string name="bd_huntington_name">Choroba Huntingtona</string>
-    <string name="bd_parkinson_name">Choroba Parkinsona</string>
-    <string name="bd_epilepsy_name">Epilepsja</string>
-    <string name="bd_tick_borne_encephalitis_name">Kleszczowe zapalenie mózgu</string>
-    <string name="bd_brain_cancer_name">Nowotwór mózgu</string>
-    <string name="bd_multiple_sclerosis_name">Stwardnienie rozsiane</string>
-    <string name="bd_aneurysm_name">Tętniak mózgu</string>
-    <string name="bd_stroke_name">Udar mózgu</string>
-    <string name="bd_meningitis_name">Zapalenie opon mózgowo-rdzeniowych</string>
+    <string name="bd_choroba_aizhalmera_name">Choroba Aizhalmera</string>
+    <string name="bd_choroba_huntingtona_name">Choroba Huntingtona</string>
+    <string name="bd_chorboa_parkinsona_name">Choroba Parkinsona</string>
+    <string name="bd_epilepsja_name">Epilepsja</string>
+    <string name="bd_kleszczowe_zapalenie_mozgu_name">Kleszczowe zapalenie mózgu</string>
+    <string name="bd_nowotwor_mozgu_name">Nowotwór mózgu</string>
+    <string name="bd_stwardnienie_rozsiane_name">Stwardnienie rozsiane</string>
+    <string name="bd_tetniak_mozgu_name">Tętniak mózgu</string>
+    <string name="bd_udar_mozgeu_name">Udar mózgu</string>
+    <string name="bd_zapalenie_opon_mozgowo_rdzeniowych_name">Zapalenie opon mózgowo-rdzeniowych</string>
 </resources>
