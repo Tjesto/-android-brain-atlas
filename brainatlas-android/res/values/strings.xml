@@ -3,6 +3,8 @@
     <string name="app_name">Atlas Mózgu</string>
 	<string name="action_show_diseases">Pokaż listę chorób</string>
     <string name="action_show_parts">Pokaż listę części mózgu</string>
+    <string name="top_view_mode">Rzut z zewnątrz</string>
+    <string name="inner_view_mode">Rzut przekroju podłużnego</string>
     <string name="action_show_sources">Źródła</string>
     <string name="action_exit">Wyjście</string><string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
     <string name="s_title">Źródła</string>

@@ -14,41 +14,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
      <TextView
-         android:id="@+id/bd_textview_2"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:layout_alignTop="@+id/bd_view"
-         android:text="@string/bd_etymology"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-     <TextView
          android:id="@+id/bd_textview_3"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/bd_textview_2"
-         android:layout_below="@+id/bd_textview_2"
+         android:layout_alignLeft="@+id/bd_ethymology_view"
+         android:layout_below="@+id/bd_ethymology_view"
          android:layout_marginTop="10dp"
          android:text="@string/bd_e_desc" />
-
-     <TextView
-         android:id="@+id/bd_textview_4"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/bd_view"
-         android:layout_below="@+id/bd_view"
-         android:layout_marginTop="10dp"
-         android:text="@string/bd_symptoms"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-     <TextView
-         android:id="@+id/bd_textview_5"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/bd_textview_4"
-         android:layout_below="@+id/bd_textview_4"
-         android:layout_marginTop="10dp"
-         android:text="@string/bd_s_desc" />
 
      <ImageView
          android:id="@+id/bd_imageview_patology_view"
@@ -59,6 +31,7 @@
          android:layout_below="@+id/bd_textview_5"
          android:layout_marginTop="10dp"
          android:layout_marginRight="10dp"
+         android:src="@drawable/ic_launcher"
          android:contentDescription="@string/info_picture" />
 
      <ImageView
@@ -67,26 +40,51 @@
          android:layout_height="100dp"
          android:layout_below="@+id/bd_textview_1"
          android:layout_marginRight="16dp"
-         android:layout_toLeftOf="@+id/bd_textview_2"
+         android:layout_toLeftOf="@+id/bd_ethymology_view"
+         android:src="@drawable/ic_launcher"
          android:contentDescription="@string/info_picture" />
-
-     <TextView
-         android:id="@+id/bd_textview_6"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/bd_patology_view"
-         android:layout_below="@+id/bd_patology_view"
-         android:layout_marginTop="10dp"
-         android:text="@string/bd_cure"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
 
      <TextView
          android:id="@+id/bd_textview_7"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/bd_textview_6"
-         android:layout_below="@+id/bd_textview_6"
-         android:layout_marginTop="10dp"
+         android:layout_alignBottom="@+id/bd_imageview"
+         android:layout_alignParentLeft="true"
          android:text="@string/bd_c_desc" />
+
+     <TextView
+         android:id="@+id/bd_cure_view"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/bd_textview_7"
+         android:layout_alignParentLeft="true"
+         android:text="@string/bd_cure"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/bd_textview_5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/bd_cure_view"
+         android:layout_alignParentLeft="true"
+         android:text="@string/bd_s_desc" />
+
+     <TextView
+         android:id="@+id/bd_symptoms_view"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/bd_textview_5"
+         android:layout_alignParentLeft="true"
+         android:text="@string/bd_symptoms"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/bd_ethymology_view"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:text="@string/bd_etymology"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
      
 </RelativeLayout>

@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.graphics.BitmapFactory;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
@@ -85,7 +86,7 @@ public abstract class BrainInfoActivity extends AbstractBrainActivityWithMenus {
 			if (result == BrainInfo.I_NOT_FOUND) {
 				continue;
 			} else {
-				imageViews.get(i).setBackgroundResource(result);
+				imageViews.get(i).setImageBitmap(BitmapFactory.decodeResource(getResources(), result));
 				imageViews.get(i).setVisibility(View.VISIBLE);
 			}
 		}

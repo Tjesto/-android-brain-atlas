@@ -70,4 +70,5 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 		startService(exit);
 		finish();
 	}
+	
 }
