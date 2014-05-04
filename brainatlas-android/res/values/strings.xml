@@ -14,6 +14,8 @@
     <string name="source_4">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
     <string name="source_5">tyle na chwile obecna starczy?</string>
     <string name="bp_name">Nazwa części mózgu</string>
+    <string name="bp_anatomy">Anatomia</string>
+    <string name="bp_functions">Funkcje</string>
     <string name="bp_desc">Tu będzie znajdować się długi i jakże porywający tekst opisujący daną część mózgu a także jej funkcjonowanie i pochodzenie, wszystko jako jeden baaardzo długi tekst. Ewentualnie z enterami ;)</string>
     <string name="bd_name">Nazwa choroby</string>
     <string name="bd_etymology">Przyczyny</string>

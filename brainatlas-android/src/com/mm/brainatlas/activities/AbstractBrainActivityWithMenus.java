@@ -68,7 +68,10 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 		Intent exit = new Intent(this, BrainService.class);
 		exit.setAction(BrainService.ACTION_EXIT);
 		startService(exit);
-		finish();
+		Intent startMain = new Intent(Intent.ACTION_MAIN);
+        startMain.addCategory(Intent.CATEGORY_HOME);
+        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(startMain);
 	}
 	
 }

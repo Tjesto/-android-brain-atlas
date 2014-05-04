@@ -97,6 +97,8 @@ public class Utils {
 				builder.append('z');
 			} else if (c.equals(' ')) {
 				builder.append('_');
+			} else if (c.equals('(') || c.equals(')')) {
+					//do nothing
 			} else {
 				builder.append(c);
 			}

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 1. Części mózgu widoczne z rzutu z zewnątrz: -->
-		<string name="bp_plat_czolowy_name">płat czołowy</string>
-		<string name="bp_plat_skroniowy_name">płat skroniowy</string>
 		<string name="bp_plat_ciemieniowy_name">płat ciemieniowy</string>
 		<string name="bp_plat_potyliczny">płat potyliczny</string>
 		<string name="bp_mozdzek_name">móżdżek</string>
