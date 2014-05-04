@@ -1,6 +1,7 @@
 package com.mm.brainatlas.services;
 
 import com.mm.brainatlas.BrainNotification;
+import com.mm.brainatlas.activities.BrainInfoActivity;
 import com.mm.brainatlas.utils.Utils;
 
 import android.app.Service;
@@ -36,10 +37,17 @@ public class BrainService extends Service {
 			initializeService();			
 		} else if (action.equals(ACTION_NOTIFY_ACTIVITY_CHANGE)) {
 			String name = intent.getStringExtra(NOTIFY_ACTIVITY_CHANGE_KEY);
+			String viewName = "";
+			if (intent.hasExtra(BrainInfoActivity.INFO_TYPE)) {
+				viewName = intent.getStringExtra(BrainInfoActivity.INFO_TYPE);
+			}
 			if (brainNotification != null) {
 				if (name == null) {
 					name = "";
 				}	
+				if (!viewName.equals("")) {
+					brainNotification.putCurrentViewName(viewName);
+				}
 				brainNotification.update(name);
 			}
 		} else if (action.equals(ACTION_EXIT)) {

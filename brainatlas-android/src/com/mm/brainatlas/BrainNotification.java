@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 
+import com.mm.brainatlas.activities.BrainInfoActivity;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
@@ -22,6 +23,8 @@ public class BrainNotification {
 	private BrainService brainService;
 	
 	private NotificationManager notificationManager;
+
+	private String currentViewName = null;
 	
 	public BrainNotification(BrainService brainService) {
 		this.brainService = brainService;
@@ -35,6 +38,10 @@ public class BrainNotification {
 	private Notification getNotification(String activityName) {
 		return buildNotification(activityName);
 	}
+	
+	public void putCurrentViewName(String name) {
+		currentViewName = name;
+	}
 
 	private Notification buildNotification(String activityName) {
 		Notification builderNotification;
@@ -46,7 +53,10 @@ public class BrainNotification {
 				.setContentText(Utils.getNameFromTag(activityName));
 		if (activityName != null && !activityName.equals("")) {
 			Intent intent = new Intent(brainService, Utils.getActivityFromNameRef(activityName));
-			
+			if (currentViewName  != null){
+				intent.putExtra(BrainInfoActivity.INFO_TYPE, currentViewName);
+				currentViewName = null;
+			}
 			PendingIntent pIntent = PendingIntent.getActivity(brainService, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 			builder.setContentIntent(pIntent);
 		}
