@@ -1,6 +1,7 @@
 package com.mm.brainatlas.activities;
 
 import com.mm.brainatlas.listeners.MainOnTouchListener;
+import com.mm.brainatlas.listeners.OnBrainTouchListener;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.StringToLogParser;
@@ -29,6 +30,8 @@ public class MainActivity extends AbstractBrainActivityWithMenus {
 	
 	private ViewMode currentViewMode = ViewMode.TOP; 
 	
+	private ImageView brainView;
+	
 	private MainOnTouchListener listener;
 	
 	@Override
@@ -41,18 +44,22 @@ public class MainActivity extends AbstractBrainActivityWithMenus {
 		setContentView(R.layout.main);
 		topView = (TextView) findViewById(R.id.view_mode_top);
 		innerView = (TextView) findViewById(R.id.view_mode_inner);
+		brainView = (ImageView) findViewById(R.id.part_view);
+		brainView.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.full_brain_top));
+		//brainView.setOnTouchListener(new OnBrainTouchListener(this, brainView));
 		listener = new MainOnTouchListener(this);
 	}
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		return listener.onTouch(getCurrentFocus(), event);
+		//return listener.onTouch(getCurrentFocus(), event);
+		return super.onTouchEvent(event);
 	}
 	@Override
 	public void onBackPressed() {
 		finish();
 	}
-	@SuppressLint("ResourceAsColor")
+	
 	public void changeView() {
 		if (currentViewMode == ViewMode.TOP) {
 			topView.setTextColor(getResources().getColor(R.color.gray));
@@ -65,14 +72,12 @@ public class MainActivity extends AbstractBrainActivityWithMenus {
 		}
 	}
 	private void prepareTopView() {
-		// TODO to implement
-		((ImageView) findViewById(R.id.part_view)).setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.tmp_shot1));
+		brainView.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.full_brain_top));
 		currentViewMode = ViewMode.TOP;
 		
 	}
 	private void prepareInnerView() {
-		// TODO to implement
-		((ImageView) findViewById(R.id.part_view)).setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.tmp_shot3));
+		brainView.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.tmp_shot3));
 		currentViewMode = ViewMode.INNER;
 		
 	}

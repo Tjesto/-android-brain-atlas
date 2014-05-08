@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="source_wd_name">Włodzisław Duch, profesor zwyczajny, Uniwersytet M. Kopernika w Toruniu, „Wykłady z Kogniwistyki”</string>
+    <string name="source_wd_link">http://www.is.umk.pl/~duch</string>
+    <string name="source_ak">Krechowiecki Adam, „Zarys anatomii człowieka (kompendium)”, Wyd. PZWL 1968 (z uwzględnioną erratą)</string>
+    <string name="source_biologia">Diana W. Martin, Eldra P Solomon., Linda R.  Berg „Biologia”, Wyd. Multico 2000</string>
+    <string name="source_tablicebiologiczne">Witold Mizerski, Beata Bednarczuk, Iwona Mizerska, Roman Mizerski,l „Tablice Biologiczne”, Wyd. Amarantan 2008</string>
+    <string name="source_hw">Wiśniewski Henryk,  „Biologia z higieną i ochroną środowiska”, Wyd. Agmen 1996</string> 
+</resources>
