@@ -2,6 +2,8 @@ package com.mm.brainatlas.services;
 
 import com.mm.brainatlas.BrainNotification;
 import com.mm.brainatlas.activities.BrainInfoActivity;
+import com.mm.brainatlas.activities.StartActivity;
+import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.Utils;
 
 import android.app.Service;
@@ -19,6 +21,12 @@ public class BrainService extends Service {
 	public static final String ACTION_EXIT = TAG + ".ACTION_EXIT";
 	
 	private BrainNotification brainNotification;
+	
+	private Class<?> lastUsedActivity;
+	
+	private Intent lastUsedIntent;
+	
+	private boolean serviceInitialized = false;
 
 	@Override
 	public IBinder onBind(Intent arg0) {
@@ -34,20 +42,25 @@ public class BrainService extends Service {
 		}
 		
 		if (action.equals(ACTION_START)) {
-			initializeService();			
+			if (!serviceInitialized) {
+				initializeService();		
+			}
+			lastUsedIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(lastUsedIntent);
 		} else if (action.equals(ACTION_NOTIFY_ACTIVITY_CHANGE)) {
 			String name = intent.getStringExtra(NOTIFY_ACTIVITY_CHANGE_KEY);
 			String viewName = "";
+			lastUsedActivity = Utils.getActivityFromNameRef(name);
+			lastUsedIntent = new Intent(this, lastUsedActivity);
 			if (intent.hasExtra(BrainInfoActivity.INFO_TYPE)) {
 				viewName = intent.getStringExtra(BrainInfoActivity.INFO_TYPE);
+				lastUsedIntent.putExtra(BrainInfoActivity.INFO_TYPE, viewName);
+				name = getText(Utils.getNamefromView(Utils.normalizeName(viewName))).toString();
 			}
 			if (brainNotification != null) {
 				if (name == null) {
 					name = "";
 				}	
-				if (!viewName.equals("")) {
-					brainNotification.putCurrentViewName(viewName);
-				}
 				brainNotification.update(name);
 			}
 		} else if (action.equals(ACTION_EXIT)) {
@@ -60,7 +73,10 @@ public class BrainService extends Service {
 
 	private void initializeService() {
 		brainNotification = new BrainNotification(this);
-		startForeground(BrainNotification.NOTIFICATION_ID, brainNotification.getNotification());		
+		startForeground(BrainNotification.NOTIFICATION_ID, brainNotification.getNotification());
+		lastUsedActivity = StartActivity.class;
+		lastUsedIntent = new Intent(this, lastUsedActivity);
+		serviceInitialized = true;
 	}
 
 }

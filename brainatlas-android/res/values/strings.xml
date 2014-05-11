@@ -25,8 +25,9 @@
     <string name="bd_cure">Zapobieganie i leczenie</string>
     <string name="bd_c_desc">Opis sposobów leczenia i zapobiegania też zapewne długi</string>
     <string name="bd_title">Lista chorób</string>
-    <string name="bp_title">Lista części mózgu</string>
-    
+    <string name="bp_title">Lista części mózgu</string>    
+    <string name="brain_part_dialog_positive">Więcej</string>
+    <string name="brain_part_dialog_negative">Wybierz inną część</string>
     
 	
 

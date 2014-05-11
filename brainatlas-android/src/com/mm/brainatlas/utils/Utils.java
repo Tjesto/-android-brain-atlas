@@ -105,6 +105,23 @@ public class Utils {
 		}
 		return builder.toString();
 	}
+
+	public static int getNamefromView(String viewName) {
+		Class<?> RString = R.string.class;
+		
+		for (Field field : RString.getFields()) {
+			try {
+				if (field.getName().contains(viewName + "_name")) {
+					return field.getInt(RString);
+				}
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
 	
 
 }

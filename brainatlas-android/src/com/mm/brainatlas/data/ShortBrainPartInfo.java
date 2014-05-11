@@ -1,42 +1,58 @@
 package com.mm.brainatlas.data;
 
-import com.mm.brainatlas.utils.Utils;
+import com.mm.brainatlas_android.R;
 
 import android.content.Context;
 
 public class ShortBrainPartInfo implements BrainInfo {
 
-	private String content;	
+	private String title;
+	
+	private String content;
+	
+	private int image;
 	
 	public ShortBrainPartInfo(Context context, String name) {
-		//content = context.getString(Utils.getContentStringFromName(name, 0));
+		Class<?> rstring = R.string.class;	
+		Class<?> rdrawable = R.drawable.class;	
+		title = "Nie znaleziono";
+		content = "";
+		image = 0;
+		try {
+			title = context.getText((rstring.getField("bp_" + name + "_name").getInt(rstring))).toString();
+			content = context.getText((rstring.getField("bp_" + name + "__1").getInt(rstring))).toString();
+			image = rdrawable.getField("bp_" + name + "_mini").getInt(rdrawable);
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public String getContent() {
-		return content;
+		return getContent(0);
 	}
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		return title;
 	}
 
 	@Override
 	public String getContent(int paragraph) {
-		//empty, implement this if you need
-		return null;
+		return content;
 	}
 
 	@Override
 	public int getImage(int imageNum) {
-		//empty, implement this if you need
-		return 0;
+		return image;
 	}
 
 	@Override
 	public void generateAllContent(String name) {
-		// TODO Auto-generated method stub
+		//not necessary, implement if you need
 		
 	}
 

@@ -29,6 +29,9 @@ public class SourcesAdapter extends ArrayAdapter<SourceInfo> {
 		View dropDownView = inflater.inflate(R.layout.single_source_item, null);
 		
 		SourceInfo item = getItem(position);
+		if (item == null) {
+			return null;
+		}
 		if (item instanceof BookSourceInfo) {
 			dropDownView.findViewById(R.id.s_item_link).setVisibility(View.GONE);			
 		} else {

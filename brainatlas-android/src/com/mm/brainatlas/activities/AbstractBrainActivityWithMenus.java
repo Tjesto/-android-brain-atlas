@@ -46,12 +46,14 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 		Intent intent = new Intent(this, ListViewActivity.class);
 		intent.putExtra(DataFactory.GET_ITEMS, DataFactory.PARTS);
 		startActivity(intent);	
+		finish();
 	}
 
 	protected void showDiseasesListActivity() {
 		Intent intent = new Intent(this, ListViewActivity.class);
 		intent.putExtra(DataFactory.GET_ITEMS, DataFactory.DISEASES);
 		startActivity(intent);	
+		finish();
 	}
 
 	@Override
@@ -61,7 +63,8 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 	}
 
 	protected void showSourcesActivity() {
-		startActivity(new Intent(this, SourcesActivity.class));		
+		startActivity(new Intent(this, SourcesActivity.class));
+		finish();
 	}
 
 	protected void exitAtlas() {
@@ -72,6 +75,7 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
         startMain.addCategory(Intent.CATEGORY_HOME);
         startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(startMain);
+        finish();
 	}
 	
 }

@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 
 import com.mm.brainatlas.activities.BrainInfoActivity;
+import com.mm.brainatlas.activities.StarterActivity;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
@@ -51,15 +52,10 @@ public class BrainNotification {
 				.setLargeIcon(largeIcon)
 				.setContentTitle(brainService.getText(R.string.app_name))
 				.setContentText(Utils.getNameFromTag(activityName));
-		if (activityName != null && !activityName.equals("")) {
-			Intent intent = new Intent(brainService, Utils.getActivityFromNameRef(activityName));
-			if (currentViewName  != null){
-				intent.putExtra(BrainInfoActivity.INFO_TYPE, currentViewName);
-				currentViewName = null;
-			}
-			PendingIntent pIntent = PendingIntent.getActivity(brainService, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-			builder.setContentIntent(pIntent);
-		}
+		Intent intent = new Intent(brainService, StarterActivity.class);
+		PendingIntent pIntent = PendingIntent.getActivity(brainService, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+		builder.setContentIntent(pIntent);
+		
 		builderNotification = builder.build();
 		return builderNotification;
 	}

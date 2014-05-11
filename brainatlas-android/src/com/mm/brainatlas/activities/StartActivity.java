@@ -25,9 +25,6 @@ public class StartActivity extends Activity {
 		} else {
 			((TextView) findViewById(R.id.studies_info_textview)).setVisibility(View.INVISIBLE);
 		}
-		Intent intent = new Intent(this, BrainService.class);
-		intent.setAction(BrainService.ACTION_START);
-		startService(intent);
 		new Thread(new Runnable(){
 
 			@Override
