@@ -45,6 +45,9 @@
             android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
         <activity
             android:name="com.mm.brainatlas.activities.WebViewActivity" />
+        <activity 
+            android:name="com.mm.brainatlas.activities.FullImageActivity" 
+            android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
         <service android:name="com.mm.brainatlas.services.BrainService" />
     </application>
 

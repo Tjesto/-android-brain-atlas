@@ -1,12 +1,14 @@
 package com.mm.brainatlas.activities;
 
 import com.mm.brainatlas.data.DataFactory;
+import com.mm.brainatlas.listeners.OnPictureClickListener;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 public class BrainPartInfoActivity extends BrainInfoActivity {
 	
@@ -28,6 +30,14 @@ public class BrainPartInfoActivity extends BrainInfoActivity {
 		intent.putExtra(BrainInfoActivity.INFO_TYPE, infoSubject);
 		startService(intent);
 		matchLayoutPartsWithData();
+		addListeners();
+	}
+
+	private void addListeners() {
+		for (ImageView view : imageViews) {
+			view.setOnClickListener(new OnPictureClickListener(this, brainInfo.getImage(imageViews.indexOf(view)+1)));
+		}
+		
 	}
 
 }
