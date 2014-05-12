@@ -1,6 +1,5 @@
 package com.mm.brainatlas.activities;
 
-import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
@@ -23,7 +22,8 @@ public class StartActivity extends Activity {
 		if (Utils.FOR_STUDIES) {
 			((TextView) findViewById(R.id.studies_info_textview)).setVisibility(View.VISIBLE);
 		} else {
-			((TextView) findViewById(R.id.studies_info_textview)).setVisibility(View.INVISIBLE);
+			((TextView) findViewById(R.id.studies_info_textview)).setVisibility(View.VISIBLE);
+			((TextView) findViewById(R.id.studies_info_textview)).setText(R.string.authors_text);
 		}
 		new Thread(new Runnable(){
 

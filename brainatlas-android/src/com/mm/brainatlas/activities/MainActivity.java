@@ -3,7 +3,7 @@ package com.mm.brainatlas.activities;
 import com.mm.brainatlas.BrainView;
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.data.ShortBrainPartInfo;
-import com.mm.brainatlas.listeners.MainOnTouchListener;
+import com.mm.brainatlas.listeners.ChangableOnTouchListener;
 import com.mm.brainatlas.listeners.OnBrainTouchListener;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.ApplicationLog;
@@ -26,7 +26,7 @@ import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AbstractBrainActivityWithMenus {
+public class MainActivity extends AbstractBrainActivityWithMenus implements Changable{
 	
 	enum ViewMode {
 		TOP, INNER;
@@ -42,7 +42,7 @@ public class MainActivity extends AbstractBrainActivityWithMenus {
 	
 	private BrainView brainView;
 	
-	private MainOnTouchListener listener;
+	private ChangableOnTouchListener listener;
 	
 	private static Context context;
 	
@@ -66,7 +66,7 @@ public class MainActivity extends AbstractBrainActivityWithMenus {
 		innerView = (TextView) findViewById(R.id.view_mode_inner);
 		brainView = (BrainView) findViewById(R.id.part_view);
 		brainView.setActivity(this);
-		listener = new MainOnTouchListener(this);
+		listener = new ChangableOnTouchListener(this);
 		context = this;
 		activity = this;
 	}
@@ -84,6 +84,7 @@ public class MainActivity extends AbstractBrainActivityWithMenus {
 		finish();
 	}
 	
+	@Override
 	public void changeView() {
 		if (currentViewMode == ViewMode.TOP) {
 			topView.setTextColor(getResources().getColor(R.color.gray));

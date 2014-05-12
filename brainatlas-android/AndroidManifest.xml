@@ -48,6 +48,12 @@
         <activity 
             android:name="com.mm.brainatlas.activities.FullImageActivity" 
             android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
+        <activity 
+            android:name="com.mm.brainatlas.activities.DiseasePartComparerActivity" 
+            android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
+        <activity 
+            android:name="com.mm.brainatlas.activities.DetailsViewComparerActivity" 
+            android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
         <service android:name="com.mm.brainatlas.services.BrainService" />
     </application>
 

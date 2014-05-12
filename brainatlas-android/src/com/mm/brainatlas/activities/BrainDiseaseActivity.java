@@ -7,6 +7,9 @@ import com.mm.brainatlas_android.R;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 
 public class BrainDiseaseActivity extends BrainInfoActivity {
 
@@ -28,6 +31,25 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 		intent.putExtra(BrainInfoActivity.INFO_TYPE, infoSubject);
 		startService(intent);
 		matchLayoutPartsWithData();
+		setListeners();
 	}
 	
+	private void setListeners() {
+		for (final ImageView view : imageViews) {
+			view.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent intent = new Intent (BrainDiseaseActivity.this, DiseasePartComparerActivity.class);
+					intent.putExtra(DiseasePartComparerActivity.DISEASE_RES_ID, brainInfo.getImage(imageViews.indexOf(view)+1));
+					intent.putExtra(DiseasePartComparerActivity.PART_RES_ID, getPartImageForDiseaseImage(brainInfo.getImage(imageViews.indexOf(view)+1)));
+					startActivity(intent);
+				}
+			});
+		}
+	}
+
+	protected int getPartImageForDiseaseImage(int image) {
+		return R.drawable.full_brain_top;
+	}
 }

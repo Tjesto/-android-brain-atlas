@@ -1,20 +1,22 @@
 package com.mm.brainatlas.listeners;
 
-import com.mm.brainatlas.activities.MainActivity;
+import com.mm.brainatlas.activities.Changable;
 
 import android.util.Log;
+import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnDragListener;
 import android.view.View.OnTouchListener;
 
-public class MainOnTouchListener implements OnTouchListener {
+public class ChangableOnTouchListener implements OnTouchListener, OnDragListener {
 
-	private final MainActivity activity;
+	private final Changable activity;
 	private float firstX = -1;
 	private boolean moved = false;
 	
 	
-	public MainOnTouchListener(MainActivity activity) {
+	public ChangableOnTouchListener(Changable activity) {
 		this.activity = activity;
 	}
 
@@ -29,6 +31,22 @@ public class MainOnTouchListener implements OnTouchListener {
 			}
 		} else if (arg1.getAction() == MotionEvent.ACTION_UP) {
 			if (arg1.getX() > firstX + 20 || arg1.getX() < firstX -20) 
+			firstX = -1;
+			boolean toMove = moved;
+			moved = false;
+			if (toMove) {
+				activity.changeView();
+			}
+		}		
+		return true;
+	}
+
+	@Override
+	public boolean onDrag(View v, DragEvent event) {
+		if (event.getAction() == DragEvent.ACTION_DRAG_STARTED) {
+			firstX = event.getX();					
+		} else if (event.getAction() == DragEvent.ACTION_DRAG_ENDED) {
+			if (event.getX() > firstX + 20 || event.getX() < firstX -20) 
 			firstX = -1;
 			boolean toMove = moved;
 			moved = false;

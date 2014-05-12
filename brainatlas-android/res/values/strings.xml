@@ -6,7 +6,9 @@
     <string name="top_view_mode">Rzut z zewnątrz</string>
     <string name="inner_view_mode">Rzut przekroju podłużnego</string>
     <string name="action_show_sources">Źródła</string>
-    <string name="action_exit">Wyjście</string><string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
+    <string name="action_exit">Wyjście</string>
+    <string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
+    <string name="authors_text">Autorzy:\nMałgorzata Łyczywek\nMikołaj Szychowiak</string>
     <string name="s_title">Źródła</string>
     <string name="source_1">\"lorem ipsum l lorem ipsum\" l lorem ipsum l lorem ipsum  - l lorem ipsum l</string>
     <string name="source_2">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
