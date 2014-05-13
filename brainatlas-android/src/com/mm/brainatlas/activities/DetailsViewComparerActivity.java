@@ -31,15 +31,14 @@ public class DetailsViewComparerActivity extends Activity implements Changable{
 		view = (ImageView) findViewById(R.id.bp_image_big);
 		view.setImageResource(diseaseId);		
 		longClickListener = new OnLongItemClickListnere(this, createStartIntent());
-		view.setOnLongClickListener(longClickListener);
 		listener = new ChangableOnTouchListener(this);
-		view.setOnDragListener(listener);
+		listener.addClickListnener(longClickListener);		
 	}
 	
 	private Intent createStartIntent() {
 		Intent startIntent = new Intent(this, BrainPartInfoActivity.class);
 		startIntent.putExtra(BrainInfoActivity.INFO_TYPE, getNameForResId(partId));
-		return null;
+		return startIntent;
 	}
 
 	private String getNameForResId(int resId) {

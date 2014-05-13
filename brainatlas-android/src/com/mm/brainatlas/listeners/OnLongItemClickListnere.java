@@ -1,6 +1,7 @@
 package com.mm.brainatlas.listeners;
 
 import com.mm.brainatlas.activities.DetailsViewComparerActivity;
+import com.mm.brainatlas.utils.ApplicationLog;
 
 import android.content.Intent;
 import android.view.View;
@@ -24,9 +25,11 @@ public class OnLongItemClickListnere implements OnLongClickListener {
 	
 	@Override
 	public boolean onLongClick(View v) {
+		
 		if (isDisease) {
 			OnImageLongClickHandler.handleDiseaseImageClick(activity);
 		} else {
+			android.util.Log.wtf("wtf else", startIntent + "");
 			OnImageLongClickHandler.handleBrainPartImageClick(activity, startIntent);
 		}
 		return true;

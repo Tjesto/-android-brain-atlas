@@ -14,6 +14,7 @@ public final class OnImageLongClickHandler {
 
 	public static void handleBrainPartImageClick(
 			DetailsViewComparerActivity activity, Intent startIntent) {
+		android.util.Log.wtf("wtf", startIntent + "");
 		activity.startActivity(startIntent);
 		activity.finish();
 		
