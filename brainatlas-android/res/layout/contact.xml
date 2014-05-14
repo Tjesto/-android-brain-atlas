@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:weightSum="10">
+    
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" 
+	    android:layout_weight="1">
+	    <TextView
+	        android:id="@+id/helper_page_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/h_title"
+	        android:layout_gravity="center_horizontal|top"
+	        android:layout_marginTop="15dp"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	    
+	    <LinearLayout 
+	        android:id="@+id/authors_layout"
+	        android:layout_marginTop="20dp"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        
+		    <TextView 
+		        android:id="@+id/author_rita"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/h_author_rita"
+		        android:layout_marginTop="15dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+		    
+		    <TextView 
+		        android:id="@+id/author_mikolaj"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/h_author_mikolaj"
+		        android:layout_marginTop="15dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+		    
+	    </LinearLayout>
+	    
+	    <TextView 
+	        android:id="@+id/authors_contact"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/h_authors_contact"
+	        android:layout_gravity="center_horizontal|top"
+	        android:layout_marginTop="15dp"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	        
+    </LinearLayout>
+        
+    <ImageView 
+	    android:id="@+id/helper_slider"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="9"
+	    android:background="@drawable/arrows"/>
+        
+</LinearLayout>
