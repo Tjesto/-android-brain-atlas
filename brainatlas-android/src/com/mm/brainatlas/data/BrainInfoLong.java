@@ -8,9 +8,11 @@ import android.util.SparseIntArray;
 
 public abstract class BrainInfoLong implements BrainInfo{
 
+	private static final String EMPTY_LABEL = "";
 	protected final String name;
 	protected final SparseArray<String> paragraphs = new SparseArray<String>();
 	protected final SparseIntArray images = new SparseIntArray();
+	protected final SparseArray<String> imageLabels = new SparseArray<String>();
 	protected final Context context;
 	
 	public BrainInfoLong(Context context, String name) {
@@ -34,12 +36,17 @@ public abstract class BrainInfoLong implements BrainInfo{
 		return name;
 	}
 	
+	public String getLabel(int imageNum) {
+		return imageLabels.get(imageNum, EMPTY_LABEL);
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder(name);
 		builder.append('\n');
 		builder.append("Paragraphs number: ");
-		builder.append(paragraphs.size()).append(";images number").append(images.size());
+		builder.append(paragraphs.size()).append(";images number ").append(images.size());
+		builder.append(";has labels ").append(imageLabels.size());
 		return builder.toString();
 	}
 }

@@ -2,6 +2,7 @@
 <resources>
     <!-- 1. Części mózgu widoczne z rzutu z zewnątrz: -->
     <string name="bp_plat_czolowy_lobus_frontalis_name">Płat czołowy (lobus frontalis)</string>
+    <string name="bp_plat_czolowy_lobus_frontalis_label__1">Płat czołowy</string>
     <string name="bp_plat_czolowy_lobus_frontalis__1">Część kresomózgowia obejmująca parzyście obie półkule. Tylnią granicę płata czołowego wyznacza bruzda środkowa zwana bruzdą Rolanda (S. centralis) – oddziela płat czołowy od ciemieniowego, od dołu zaś ograniczony jest bruzdą dolną (S. lateralis).</string>
     <string name="bp_plat_czolowy_lobus_frontalis__2">U człowieka obszar ruchowy obejmujący wszystkie ośrodki ruchowe leży tylko w płacie czołowym ku przodowi od bruzdy środkowej. Są to pola ruchowe kontrolujące pracę mięśni szkieletowych.\n\nPłat czołowy odpowiada za wyuczone działania ruchowe (typu  taniec, mimika, nawyki ), ruch gałek ocznych zależny od woli (pola czołowe oczu), fizyczne generowanie mowy (obszar ośrodka Broki), analizę i kontrolę stanów emocjonalnych, ich ekspresję językową, ocenę sytuacji, planowanie w odpowiedzi na zdarzenia zewnętrzne, wolę działania, podejmowanie decyzji, zdolność określania relacji czasowych.</string>
     <string name="bp_plat_ciemieniowy_lobus_parientalis_name">Płat ciemieniowy  (lobus parientalis)</string>

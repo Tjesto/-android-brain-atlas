@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mm.brainatlas.activities.Changable;
+import com.mm.brainatlas.activities.Changable.Direction;
 
 import android.util.Log;
-import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnLongClickListener;
@@ -19,6 +19,7 @@ public class ChangableOnTouchListener implements OnTouchListener {
 	private float firstY = -1;
 	private boolean moved = false;
 	private final List<OnLongClickListener> clickListeners;
+	private Direction currentDirection = Direction.UNKNOWN;
 	
 	
 	public ChangableOnTouchListener(Changable activity) {
@@ -31,6 +32,7 @@ public class ChangableOnTouchListener implements OnTouchListener {
 		if (arg1.getAction() == MotionEvent.ACTION_DOWN) {
 			firstX = arg1.getX();
 			firstY = arg1.getY();
+			currentDirection = Direction.UNKNOWN;
 		} else if (arg1.getAction() == MotionEvent.ACTION_MOVE) {
 			if (arg1.getX() > firstX + 20 || arg1.getX() < firstX -20) {
 				moved = true;
@@ -38,6 +40,11 @@ public class ChangableOnTouchListener implements OnTouchListener {
 			}
 		} else if (arg1.getAction() == MotionEvent.ACTION_UP) {
 			if (arg1.getX() > firstX + 20 || arg1.getX() < firstX - 20) {
+				if (firstX > arg1.getX()) {
+					currentDirection = Direction.LEFT;
+				} else if (firstX < arg1.getX()) {
+					currentDirection = Direction.RIGHT;
+				}
 				firstX = -1;
 			}
 			boolean toMove = moved;
@@ -65,6 +72,10 @@ public class ChangableOnTouchListener implements OnTouchListener {
 		if (clickListeners.contains(listener)) {
 			clickListeners.remove(listener);
 		}
+	}
+
+	public Direction getDirection() {
+		return currentDirection;
 	}
 
 }

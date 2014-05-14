@@ -6,6 +6,7 @@
     <string name="top_view_mode">Rzut z zewnątrz</string>
     <string name="inner_view_mode">Rzut przekroju podłużnego</string>
     <string name="action_show_sources">Źródła</string>
+    <string name="action_help_me">Przewodnik po aplikacji</string>
     <string name="action_exit">Wyjście</string>
     <string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>
     <string name="authors_text">Autorzy:\nMałgorzata Łyczywek\nMikołaj Szychowiak</string>
@@ -15,6 +16,7 @@
     <string name="source_3">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
     <string name="source_4">nazwa_zrodla  - autor - adres_lub_wydawnictwo</string>
     <string name="source_5">tyle na chwile obecna starczy?</string>
+    <string name="not_implemented_yet">Funkcjonalnosć jest w trakcie implementacji </string>
     <string name="bp_name">Nazwa części mózgu</string>
     <string name="bp_anatomy">Anatomia</string>
     <string name="bp_functions">Funkcje</string>
@@ -30,6 +32,17 @@
     <string name="bp_title">Lista części mózgu</string>    
     <string name="brain_part_dialog_positive">Więcej</string>
     <string name="brain_part_dialog_negative">Wybierz inną część</string>
+    <string name="internal_error">Wystąpił nieoczekiwany błąd</string>
+    <string name="h_title">Kontakt:</string>
+    <string name="h_author_rita">Małgorzata Rita Łyczywek</string>
+    <string name="h_author_mikolaj">Mikołaj Szychowiak</string>
+    <string name="h_authors_contact">e-mail: atlas.mozgu@gmail.com</string>
+    <string name="guide">Informacja jak korzsytać z danego ekranu</string>
+    <string name="guide__1">Informacja jak korzsytać z danego ekranu 1</string>
+    <string name="guide__2">Informacja jak korzsytać z danego ekranu 2</string>
+    <string name="guide__3">Informacja jak korzsytać z danego ekranu 3</string>
+    <string name="guide__4">Informacja jak korzsytać z danego ekranu 4</string>
+    <string name="h_page">page no</string>
     
 	
 

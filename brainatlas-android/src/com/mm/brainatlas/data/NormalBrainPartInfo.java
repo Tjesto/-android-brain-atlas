@@ -21,10 +21,25 @@ public class NormalBrainPartInfo extends BrainInfoLong {
 		String normalizedName = Utils.normalizeName(name);
 		
 		for (Field f : reflectionRString.getFields()) {
-			if (f.getName().contains("bp_" + normalizedName) && !f.getName().contains("_name")){
+			if (f.getName().contains("bp_" + normalizedName) && !f.getName().contains("_name") && !f.getName().contains("_label")){
 				try {
 					String info = context.getText(f.getInt(reflectionRString)).toString();
 					paragraphs.put(Utils.getViewNumFromString(f.getName()), info);
+				} catch (IllegalAccessException e) {
+					e.printStackTrace();
+				} catch (IllegalArgumentException e) {
+					e.printStackTrace();
+				} catch (IllegalStringFormatException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		for (Field f : reflectionRString.getFields()) {
+			if (f.getName().contains("bp_" + normalizedName) && !f.getName().contains("_name") && f.getName().contains("_label")){
+				try {
+					String info = context.getText(f.getInt(reflectionRString)).toString();
+					imageLabels.put(Utils.getViewNumFromString(f.getName()), info);
 				} catch (IllegalAccessException e) {
 					e.printStackTrace();
 				} catch (IllegalArgumentException e) {

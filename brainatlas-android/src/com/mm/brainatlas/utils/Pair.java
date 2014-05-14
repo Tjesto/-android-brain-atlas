@@ -9,5 +9,14 @@ public class Pair<T1, T2> {
 		this.secondElement = secondElement;
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder(super.toString()).append("\n");
+		builder.append("Type one value is ").append(firstElement).append("\n");
+		builder.append("Type two value is ").append(secondElement).append("\n");
+		
+		return builder.toString();
+	}
+	
 	//TODO: comparing
 }

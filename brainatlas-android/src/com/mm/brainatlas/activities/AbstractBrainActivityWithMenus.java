@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public abstract class AbstractBrainActivityWithMenus extends Activity {
 
-	private static final Object EXIT_ACTIVITY = null;
+	private static final String EXIT_ACTIVITY = null;	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -34,6 +34,9 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 		case R.id.action_show_sources:
 			showSourcesActivity();
 			return true;
+		case R.id.action_help_me:
+			showHelpMeActivity();
+			return true;
 		case R.id.action_exit:
 			exitAtlas();
 			return true;
@@ -42,6 +45,12 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 		}
 	}
 	
+	protected void showHelpMeActivity() {
+		Intent intent = new Intent(this, AppGuideActivity.class);
+		startActivity(intent);
+		Toast.makeText(this, R.string.not_implemented_yet, Toast.LENGTH_SHORT).show();
+	}
+
 	protected void showBrainPartsActivity() {
 		Intent intent = new Intent(this, ListViewActivity.class);
 		intent.putExtra(DataFactory.GET_ITEMS, DataFactory.PARTS);

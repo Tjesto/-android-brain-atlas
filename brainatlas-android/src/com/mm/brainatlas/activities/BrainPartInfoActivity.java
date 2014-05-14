@@ -3,6 +3,7 @@ package com.mm.brainatlas.activities;
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.listeners.OnPictureClickListener;
 import com.mm.brainatlas.services.BrainService;
+import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
@@ -25,6 +26,8 @@ public class BrainPartInfoActivity extends BrainInfoActivity {
 		String infoSubject = getIntent().getStringExtra(INFO_TYPE);
 		if (Utils.isEmptyOrNull(infoSubject)) {
 			infoSubject = UNKNOWN_INFO;
+			ApplicationLog.informInternalError(this);
+			finish();
 		}
 		brainInfo = DataFactory.getInfoForClass(this, TAG, infoSubject);
 		intent.putExtra(BrainInfoActivity.INFO_TYPE, infoSubject);
@@ -35,9 +38,16 @@ public class BrainPartInfoActivity extends BrainInfoActivity {
 
 	private void addListeners() {
 		for (ImageView view : imageViews) {
-			view.setOnClickListener(new OnPictureClickListener(this, brainInfo.getImage(imageViews.indexOf(view)+1)));
+			view.setOnClickListener(new OnPictureClickListener(this, brainInfo.getImage(imageViews.indexOf(view)+1), brainInfo.getLabel(imageViews.indexOf(view)+1)));
 		}
 		
+	}
+	
+	@Override
+	protected void showHelpMeActivity() {
+		Intent intent = new Intent(this, AppGuideActivity.class);
+		intent.putExtra(AppGuideActivity.WHERE_AM_I, TAG);
+		startActivity(intent);
 	}
 
 }

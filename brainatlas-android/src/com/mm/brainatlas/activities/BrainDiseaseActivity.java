@@ -2,6 +2,7 @@ package com.mm.brainatlas.activities;
 
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.services.BrainService;
+import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
@@ -26,6 +27,8 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 		String infoSubject = getIntent().getStringExtra(INFO_TYPE);
 		if (Utils.isEmptyOrNull(infoSubject)) {
 			infoSubject = UNKNOWN_INFO;
+			ApplicationLog.informInternalError(this);
+			finish();
 		}
 		brainInfo = DataFactory.getInfoForClass(this, TAG, infoSubject);
 		intent.putExtra(BrainInfoActivity.INFO_TYPE, infoSubject);
@@ -51,5 +54,12 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 
 	protected int getPartImageForDiseaseImage(int image) {
 		return R.drawable.full_brain_top;
+	}
+	
+	@Override
+	protected void showHelpMeActivity() {
+		Intent intent = new Intent(this, AppGuideActivity.class);
+		intent.putExtra(AppGuideActivity.WHERE_AM_I, TAG);
+		startActivity(intent);
 	}
 }

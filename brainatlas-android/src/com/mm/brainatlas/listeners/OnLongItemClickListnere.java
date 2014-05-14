@@ -29,8 +29,10 @@ public class OnLongItemClickListnere implements OnLongClickListener {
 		if (isDisease) {
 			OnImageLongClickHandler.handleDiseaseImageClick(activity);
 		} else {
-			android.util.Log.wtf("wtf else", startIntent + "");
+			/* uncomment this if start new activity
 			OnImageLongClickHandler.handleBrainPartImageClick(activity, startIntent);
+			*/
+			OnImageLongClickHandler.handleDiseaseImageClick(activity);
 		}
 		return true;
 	}
