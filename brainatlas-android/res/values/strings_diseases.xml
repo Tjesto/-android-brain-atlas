@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="bd_choroba_aizhalmera_name">Choroba Aizhalmera</string>
+    <!--<string name="bd_choroba_alzheimera_morbus_alzheimer_name">Choroba Alzheimera (Morbus Alzheimer)</string>
     <string name="bd_choroba_huntingtona_name">Choroba Huntingtona</string>
     <string name="bd_chorboa_parkinsona_name">Choroba Parkinsona</string>
     <string name="bd_epilepsja_name">Epilepsja</string>
@@ -10,5 +10,5 @@
     <string name="bd_stwardnienie_rozsiane_name">Stwardnienie rozsiane</string>
     <string name="bd_tetniak_mozgu_name">Tętniak mózgu</string>
     <string name="bd_udar_mozgeu_name">Udar mózgu</string>
-    <string name="bd_zapalenie_opon_mozgowo_rdzeniowych_name">Zapalenie opon mózgowo-rdzeniowych</string>
+    <string name="bd_zapalenie_opon_mozgowo_rdzeniowych_name">Zapalenie opon mózgowo-rdzeniowych</string>-->
 </resources>

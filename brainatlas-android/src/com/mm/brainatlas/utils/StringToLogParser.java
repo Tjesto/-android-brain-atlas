@@ -55,12 +55,12 @@ public final class StringToLogParser {
 		ex.printStackTrace(writer);
 		text.append(DateFormat.getDateTimeInstance(DateFormat.FULL,
 				DateFormat.FULL).format(new Date(System.currentTimeMillis())));
-		text.append("\n\n").append("<font color=\"#0022CC\">").append("Thread info:\n");
-		text.append(thread.toString()).append("</font>").append("\n\n");
-		text.append("<font color=\"#CC2222\">").append("Throwable info:\n");
-		text.append(ex.toString()).append("\n\n").append("</font>");
-		text.append("<font color=\"red\">").append(stackTraceWriter.toString()).append("</font>");
-		return Html.fromHtml(text.toString()).toString();
+		text.append("\n\n").append("Thread info:\n");
+		text.append(thread.toString()).append("\n\n");
+		text.append("Throwable info:\n");
+		text.append(ex.toString()).append("\n\n");
+		text.append(stackTraceWriter.toString());
+		return text.toString();
 	}
 	
 }

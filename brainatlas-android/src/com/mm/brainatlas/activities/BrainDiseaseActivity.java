@@ -1,6 +1,7 @@
 package com.mm.brainatlas.activities;
 
 import com.mm.brainatlas.data.DataFactory;
+import com.mm.brainatlas.listeners.OnPictureClickListener;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.Utils;
@@ -39,7 +40,7 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 	
 	private void setListeners() {
 		for (final ImageView view : imageViews) {
-			view.setOnClickListener(new OnClickListener() {
+			/*view.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
@@ -48,7 +49,8 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 					intent.putExtra(DiseasePartComparerActivity.PART_RES_ID, getPartImageForDiseaseImage(brainInfo.getImage(imageViews.indexOf(view)+1)));
 					startActivity(intent);
 				}
-			});
+			});*/
+			view.setOnClickListener(new OnPictureClickListener(this, brainInfo.getImage(imageViews.indexOf(view)+1), brainInfo.getLabel(imageViews.indexOf(view)+1)));
 		}
 	}
 

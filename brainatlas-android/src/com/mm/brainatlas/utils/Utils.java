@@ -95,7 +95,7 @@ public class Utils {
 				builder.append('s');
 			} else if (c.equals('Ÿ') || c.equals('¿')) {
 				builder.append('z');
-			} else if (c.equals(' ')) {
+			} else if (c.equals(' ') || c.equals('-')) {
 				builder.append('_');
 			} else if (c.equals('(') || c.equals(')')) {
 					//do nothing
