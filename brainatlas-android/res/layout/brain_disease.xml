@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
-    android:orientation="vertical">
+    android:orientation="vertical">	    
 
     <TextView
         android:id="@+id/bd_textview_1"
@@ -12,7 +12,9 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/bd_name"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-    
+    <ScrollView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <TextView
          android:id="@+id/bd_textview_2"
          android:layout_width="wrap_content"
@@ -21,6 +23,7 @@
          android:layout_marginLeft="30dp"
          android:layout_marginRight="30dp"
          android:text="@string/bd_e_desc" />
+    </ScrollView>
 
     
      
@@ -31,7 +34,9 @@
          android:text="@string/bd_symptoms"
          android:layout_marginLeft="30dp"
          android:textAppearance="?android:attr/textAppearanceMedium" />
-
+	<ScrollView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content">
      <TextView
          android:id="@+id/bd_textview_3"
          android:layout_width="wrap_content"
@@ -39,7 +44,7 @@
          android:layout_marginLeft="30dp"
          android:layout_marginRight="30dp"
          android:text="@string/bd_c_desc" />
-     
+     </ScrollView>
      <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,13 +75,15 @@
 		         
 		         android:text="@string/bd_etymology"
 		         android:textAppearance="?android:attr/textAppearanceMedium" />
-		    
+		    <ScrollView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content">
 		     <TextView
 		         android:id="@+id/bd_textview_4"
 		         android:layout_width="wrap_content"
-		         android:layout_height="wrap_content"
-		         android:layout_marginTop="10dp"
+		         android:layout_height="wrap_content"		         
 		         android:text="@string/bd_e_desc" />
+		     </ScrollView>
      	</LinearLayout>
      	
      </LinearLayout>
@@ -101,12 +108,15 @@
 		         android:layout_height="wrap_content"
 		         android:text="@string/bd_cure"
 		         android:textAppearance="?android:attr/textAppearanceMedium" />
-		
+			<ScrollView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content">
 		     <TextView
 		         android:id="@+id/bd_textview_5"
 		         android:layout_width="wrap_content"
 		         android:layout_height="wrap_content"
 		         android:text="@string/bd_s_desc" />
+		     </ScrollView>
 		     
      	</LinearLayout>
 
@@ -126,6 +136,6 @@
         android:layout_height="100dp"
         android:layout_marginRight="30dp"
         android:contentDescription="@string/info_picture"
-        android:src="@drawable/full_brain_top" />
-     
+        android:src="@drawable/full_brain_top" />     
 </LinearLayout>
+

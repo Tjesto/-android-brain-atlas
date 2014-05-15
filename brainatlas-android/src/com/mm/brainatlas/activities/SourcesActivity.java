@@ -8,6 +8,7 @@ import com.mm.brainatlas.SourcesAdapter;
 import com.mm.brainatlas.data.BookSourceInfo;
 import com.mm.brainatlas.data.LectureSourceInfo;
 import com.mm.brainatlas.data.SourceInfo;
+import com.mm.brainatlas.data.WebsiteSourceInfo;
 import com.mm.brainatlas.listeners.OnSourceItemClickListener;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas_android.R;
@@ -48,6 +49,15 @@ public class SourcesActivity extends AbstractBrainActivityWithMenus {
 		sourceList.add(new BookSourceInfo(getText(R.string.source_tablicebiologiczne).toString()));
 		sourceList.add(new LectureSourceInfo(getText(R.string.source_wd_name)
 				.toString(), getText(R.string.source_wd_link).toString()));
+		sourceList.add(new WebsiteSourceInfo(getText(
+				R.string.source_biomed_name).toString(), getText(
+				R.string.source_biomed_link).toString()));
+		sourceList.add(new WebsiteSourceInfo(getText(
+				R.string.source_padaczka_name).toString(), getText(
+				R.string.source_padaczka_link).toString()));
+		sourceList.add(new WebsiteSourceInfo(getText(
+				R.string.source_radiopaedia_name).toString(), getText(
+				R.string.source_radiopaedia_link).toString()));
 		
 		
 		SourcesAdapter sourcesAdapter = new SourcesAdapter(this, R.layout.single_source_item, sourceList);
