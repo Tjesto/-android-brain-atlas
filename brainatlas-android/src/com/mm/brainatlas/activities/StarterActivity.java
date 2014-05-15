@@ -1,5 +1,8 @@
 package com.mm.brainatlas.activities;
 
+import java.lang.Thread.UncaughtExceptionHandler;
+
+import com.mm.brainatlas.BrainAtlasUncoughtExceptionHandler;
 import com.mm.brainatlas.services.BrainService;
 
 import android.app.Activity;
@@ -13,6 +16,8 @@ public class StarterActivity extends Activity {
 		Intent intent = new Intent(this, BrainService.class);
 		intent.setAction(BrainService.ACTION_START);
 		startService(intent);
+		UncaughtExceptionHandler handler = Thread.getDefaultUncaughtExceptionHandler();
+		Thread.setDefaultUncaughtExceptionHandler(new BrainAtlasUncoughtExceptionHandler(this, handler));
 		finish();
 	}
 }

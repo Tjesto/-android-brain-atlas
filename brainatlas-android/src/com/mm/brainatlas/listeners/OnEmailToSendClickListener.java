@@ -20,8 +20,8 @@ public class OnEmailToSendClickListener implements OnLongClickListener{
 	@Override
 	public boolean onLongClick(View v) {
 		if (activity.isEmailToSend())
-		EmailEvents.sendTestMail(activity);
-		//EmailEvents.sendContactMail(activity);
+		//EmailEvents.sendTestMail(activity);
+		EmailEvents.sendContactMail(activity);
 		return true;
 	}
 

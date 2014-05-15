@@ -18,7 +18,7 @@ public final class EmailEvents {
 	public static void sendContactMail(Context context) {		
 		Intent intent = new Intent(Intent.ACTION_SENDTO);
 		intent.setType("message/rfc822");
-		intent.putExtra(Intent.EXTRA_SUBJECT, TEST_SUBJECT);
+		intent.putExtra(Intent.EXTRA_SUBJECT, CONTACT_SUBJECT);
 		intent.setData(Uri.parse("mailto:" + EMAIL_ADDRESS));
 		try {
 			context.startActivity(intent);
@@ -39,6 +39,21 @@ public final class EmailEvents {
 		} catch (ActivityNotFoundException e) {
 			Toast.makeText(context, "Nie znaleziono klienta e-mail", Toast.LENGTH_SHORT).show();
 		}*/
+	}
+
+	public static void sendExceptionInfo(Context context, Thread thread,
+			Throwable ex) {
+		Intent intent = new Intent(Intent.ACTION_SENDTO);
+		intent.setType("message/rfc822");
+		intent.putExtra(Intent.EXTRA_SUBJECT, StringToLogParser.getExceptionEmailSubject(ex));
+		intent.putExtra(Intent.EXTRA_TEXT, StringToLogParser.getExceptionEmailText(thread, ex));
+		intent.setData(Uri.parse("mailto:" + EMAIL_ADDRESS));
+		try {
+			context.startActivity(intent);
+		} catch (ActivityNotFoundException e) {
+			Toast.makeText(context, "Nie znaleziono klienta e-mail", Toast.LENGTH_SHORT).show();
+		}
+		
 	}
 
 }
