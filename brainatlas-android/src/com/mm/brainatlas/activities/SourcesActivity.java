@@ -6,6 +6,7 @@ import java.util.Map;
 import com.mm.brainatlas.SourceInfoFactory;
 import com.mm.brainatlas.SourcesAdapter;
 import com.mm.brainatlas.data.BookSourceInfo;
+import com.mm.brainatlas.data.InterestingSourceInfo;
 import com.mm.brainatlas.data.LectureSourceInfo;
 import com.mm.brainatlas.data.SourceInfo;
 import com.mm.brainatlas.data.WebsiteSourceInfo;
@@ -42,6 +43,7 @@ public class SourcesActivity extends AbstractBrainActivityWithMenus {
 	private void createSourceList() {
 		Map<String, Integer> stringsLables = SourceInfo.getFromResources();
 		ArrayList<SourceInfo> sourceList = new ArrayList<SourceInfo>();
+		ArrayList<InterestingSourceInfo> interestingList = new ArrayList<InterestingSourceInfo>();
 		int i = 0;		
 		sourceList.add(new BookSourceInfo(getText(R.string.source_ak).toString()));
 		sourceList.add(new BookSourceInfo(getText(R.string.source_biologia).toString()));
@@ -58,8 +60,27 @@ public class SourcesActivity extends AbstractBrainActivityWithMenus {
 		sourceList.add(new WebsiteSourceInfo(getText(
 				R.string.source_radiopaedia_name).toString(), getText(
 				R.string.source_radiopaedia_link).toString()));
+		sourceList.add(new WebsiteSourceInfo(getText(
+				R.string.source_neurology_name).toString(), getText(
+				R.string.source_neurology_link).toString()));
+		sourceList.add(new WebsiteSourceInfo(getText(
+				R.string.source_alzheimerassociation_name).toString(), getText(
+				R.string.source_alzheimerassociation_link).toString()));
 		
+		interestingList.add(new InterestingSourceInfo(this, getText(
+				R.string.source_nowotwormozgu_name).toString(), getText(
+				R.string.source_nowotwormozgu_link).toString()));
+		interestingList.add(new InterestingSourceInfo(this, getText(
+				R.string.source_tetniak1_name).toString(), getText(
+				R.string.source_tetniak1_link).toString()));
+		interestingList.add(new InterestingSourceInfo(this, getText(
+				R.string.source_tetniak2_name).toString(), getText(
+				R.string.source_tetniak2_link).toString()));
+		interestingList.add(new InterestingSourceInfo(this, getText(
+				R.string.source_tetniak3_name).toString(), getText(
+				R.string.source_tetniak3_link).toString()));
 		
+		sourceList.addAll(interestingList);
 		SourcesAdapter sourcesAdapter = new SourcesAdapter(this, R.layout.single_source_item, sourceList);
 		
 		ListView listView = (ListView) findViewById(R.id.sources_list);

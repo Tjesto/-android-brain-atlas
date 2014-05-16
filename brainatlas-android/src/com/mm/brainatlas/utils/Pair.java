@@ -11,12 +11,23 @@ public class Pair<T1, T2> {
 	
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder(super.toString()).append("\n");
+		StringBuilder builder = new StringBuilder();
 		builder.append("Type one value is ").append(firstElement).append("\n");
 		builder.append("Type two value is ").append(secondElement).append("\n");
 		
 		return builder.toString();
 	}
 	
-	//TODO: comparing
+	@Override
+	public boolean equals(Object o) {
+		if (o == null) {
+			return false;
+		}
+		
+		if (o instanceof Pair) {
+			Pair<T1,T2> p = (Pair<T1,T2>) o;
+			return p.firstElement.equals(this.firstElement) && p.secondElement.equals(this.secondElement);
+		}
+		return false;
+	}
 }

@@ -1,6 +1,6 @@
 package com.mm.brainatlas.data;
 
-public final class WebsiteSourceInfo extends SourceInfo {
+public class WebsiteSourceInfo extends SourceInfo {
 
 	private final String name;
 	

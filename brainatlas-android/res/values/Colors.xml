@@ -3,5 +3,7 @@
     <color name="gray">#A3A3A5</color>
     <color name="white">#ffffff</color>
     <color name="hyper_text_color">#C9A2BF</color>
+    <color name="interesting_font_color">#99CCFF</color>
+    <color name="interesting_background">#003333</color>
     
 </resources>

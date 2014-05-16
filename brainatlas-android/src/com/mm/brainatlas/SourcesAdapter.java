@@ -3,6 +3,7 @@ package com.mm.brainatlas;
 import java.util.List;
 
 import com.mm.brainatlas.data.BookSourceInfo;
+import com.mm.brainatlas.data.InterestingSourceInfo;
 import com.mm.brainatlas.data.SourceInfo;
 import com.mm.brainatlas_android.R;
 
@@ -33,7 +34,12 @@ public class SourcesAdapter extends ArrayAdapter<SourceInfo> {
 			return null;
 		}
 		if (item instanceof BookSourceInfo) {
-			dropDownView.findViewById(R.id.s_item_link).setVisibility(View.GONE);			
+			dropDownView.findViewById(R.id.s_item_link).setVisibility(View.GONE);
+		} else if (item instanceof InterestingSourceInfo) {
+			dropDownView.setBackgroundColor(((InterestingSourceInfo) item).getBackground()); 
+			dropDownView.findViewById(R.id.s_item_link).setVisibility(View.VISIBLE);
+			((TextView) dropDownView.findViewById(R.id.s_item_link)).setText(item.getLink());
+			((TextView) dropDownView.findViewById(R.id.s_item_book)).setTextColor(((InterestingSourceInfo) item).getFontColor());
 		} else {
 			dropDownView.findViewById(R.id.s_item_link).setVisibility(View.VISIBLE);
 			((TextView) dropDownView.findViewById(R.id.s_item_link)).setText(item.getLink());
