@@ -1,5 +1,6 @@
 package com.mm.brainatlas.activities;
 
+import com.mm.brainatlas.data.BrainDiseaseInfo;
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.listeners.OnPictureClickListener;
 import com.mm.brainatlas.services.BrainService;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class BrainDiseaseActivity extends BrainInfoActivity {
 
@@ -40,17 +42,35 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 	
 	private void setListeners() {
 		for (final ImageView view : imageViews) {
-			/*view.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					Intent intent = new Intent (BrainDiseaseActivity.this, DiseasePartComparerActivity.class);
-					intent.putExtra(DiseasePartComparerActivity.DISEASE_RES_ID, brainInfo.getImage(imageViews.indexOf(view)+1));
-					intent.putExtra(DiseasePartComparerActivity.PART_RES_ID, getPartImageForDiseaseImage(brainInfo.getImage(imageViews.indexOf(view)+1)));
-					startActivity(intent);
+			if (brainInfo instanceof BrainDiseaseInfo) {
+				final int photo = imageViews.indexOf(view) + 1;
+				if (((BrainDiseaseInfo) brainInfo).hasLink(photo)) {
+					view.setOnClickListener(new OnClickListener() {
+
+						@Override
+						public void onClick(View v) {
+							Intent intent = new Intent(
+									BrainDiseaseActivity.this,
+									DiseasePartComparerActivity.class);
+							intent.putExtra(
+									DiseasePartComparerActivity.DISEASE_RES_ID,
+									brainInfo.getImage(photo));
+							intent.putExtra(
+									DiseasePartComparerActivity.PART_RES_ID,
+									((BrainDiseaseInfo) brainInfo)
+											.getLink(photo));
+							startActivity(intent);
+							String label = brainInfo.getLabel(photo);
+							if (!label.equals("")) {
+								Toast.makeText(BrainDiseaseActivity.this,
+										label, Toast.LENGTH_LONG).show();
+							}
+						}
+					});
 				}
-			});*/
-			view.setOnClickListener(new OnPictureClickListener(this, brainInfo.getImage(imageViews.indexOf(view)+1), brainInfo.getLabel(imageViews.indexOf(view)+1)));
+			} else {
+				view.setOnClickListener(new OnPictureClickListener(this, brainInfo.getImage(imageViews.indexOf(view)+1), brainInfo.getLabel(imageViews.indexOf(view)+1)));
+			}
 		}
 	}
 

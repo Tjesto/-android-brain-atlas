@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class DetailsViewComparerActivity extends Activity implements Changable{
 
@@ -54,10 +55,14 @@ public class DetailsViewComparerActivity extends Activity implements Changable{
 	public void changeView() {
 		 if (currentlyIsDisease) {
 			 view.setImageResource(partId);
-			 currentlyIsDisease = false;			 
+			 currentlyIsDisease = false;	
+			 Toast.makeText(this,
+						R.string.normal_brain, Toast.LENGTH_SHORT).show();
 		 } else {
 			 view.setImageResource(diseaseId);
 			 currentlyIsDisease = true;
+			 Toast.makeText(this,
+						R.string.sick_brain, Toast.LENGTH_SHORT).show();
 		 }
 		longClickListener.notifyViewChange(currentlyIsDisease);
 	}

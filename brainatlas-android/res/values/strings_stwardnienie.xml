@@ -7,4 +7,6 @@
 <string name="bd_stwardnienie_rozsiane_sclerosis_multiplet__4">Leczenie farmakologiczne polega głównie na podawaniu leków przeciwzapalnych, a w okresie rzutu choroby dużych dawek leków steroidowych (metyloprednizolon), które zmniejszają nasilenie reakcji zapalnej w ognisku demielinizacji i przyspieszają ustępowanie objawów. Ponadto duży nacisk kładzie się na prowadzenie oszczędzającego trybu życia, który nie dopuszcza do nadmiernej otyłości, przemęczenia fizycznego i psychicznego, narażenia na przegrzanie, dodatkowe infekcje i stany zapalne, np. w zębach czy migdałkach. Są to bowiem czynniki, które mogą sprowokować kolejny rzut choroby.</string>
 <string name="bd_stwardnienie_rozsiane_sclerosis_multiplet_label__1">obraz MRI mózgu 30-letniego pacjenta ze stwardnieniem rozsianym</string>
 <string name="bd_stwardnienie_rozsiane_sclerosis_multiplet_label__2">obraz MRI mózgu 30-letniego pacjenta ze stwardnieniem rozsianym</string>
+<string name="bd_stwardnienie_rozsiane_sclerosis_multiplet_link__1">normal_brain_1</string>
+<string name="bd_stwardnienie_rozsiane_sclerosis_multiplet_link__2">normal_brain_2</string>
 </resources>

@@ -45,10 +45,11 @@
         					-W ramce na dole ekranu pojawia się podpis obrazka. Znika po kilku sekundach</string>    
     <string name="h_page">page no</string>
     <string name="email_send_request">Wyślij maila...</string>
-    <string name="copyrights_images">Obrazy: © 2014 Alzheimer\'s Association.  www.alz.org.\nAll rights reserved.\nIllustrations by Stacy Jannis.</string>
-    <string name="copyrights_ours">© 2014 Mikołaj Szychowiak, Małgorzata Łyczywek</string>
+    <string name="copyrights_images">© 2014 Małgorzata Łyczywek, Mikołaj Szychowiak</string>    
     <string name="source_alzheimerassociation_name">Alzheimer\'s Association</string>
     <string name="source_alzheimerassociation_link">http://www.alz.org</string>
+    <string name="normal_brain">Zdrowy mózg</string>
+    <string name="sick_brain">Mózg zmieniony chorobowo</string>
     
 	
 
