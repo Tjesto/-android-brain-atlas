@@ -67,10 +67,10 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 							}
 						}
 					});
+					continue;
 				}
-			} else {
-				view.setOnClickListener(new OnPictureClickListener(this, brainInfo.getImage(imageViews.indexOf(view)+1), brainInfo.getLabel(imageViews.indexOf(view)+1)));
 			}
+			view.setOnClickListener(new OnPictureClickListener(this, brainInfo.getImage(imageViews.indexOf(view)+1), brainInfo.getLabel(imageViews.indexOf(view)+1)));
 		}
 	}
 
