@@ -50,6 +50,8 @@
     <string name="source_alzheimerassociation_link">http://www.alz.org</string>
     <string name="normal_brain">Zdrowy mózg</string>
     <string name="sick_brain">Mózg zmieniony chorobowo</string>
+    <string name="test_alpha">To jest wersja ALFA aplikacji Atlas Mózgu. W niektórych przypadkach aplikacja może działań niestabilnie.\n\nWszystkie uwagi prosimy kierować na adres e-mail: atlas.mozgu@gmail.com</string>
+    <string name="text_ok">OK</string>
     
 	
 
