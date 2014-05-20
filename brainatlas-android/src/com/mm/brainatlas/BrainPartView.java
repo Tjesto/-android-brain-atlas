@@ -76,6 +76,9 @@ public class BrainPartView extends View {
 	}
 
 	private boolean isSomethingHere(float x, float y) {
+		if (x > background.getWidth() || y > background.getHeight() || x < 0 || y < 0) {
+			return false;
+		}
 		if (background.getPixel((int)x, (int)y) != 0) {
 			return true;
 		}

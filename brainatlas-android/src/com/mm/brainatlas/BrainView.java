@@ -85,7 +85,7 @@ public class BrainView extends View {
 		}
 		return true;
 	}
-
+	
 	public MainActivity getActivity() {		 
 		return parentActivity;
 	}
