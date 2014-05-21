@@ -1,26 +1,20 @@
 package com.mm.brainatlas;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.mm.brainatlas.activities.BrainInfoActivity;
 import com.mm.brainatlas.activities.BrainPartInfoActivity;
 import com.mm.brainatlas.activities.MainActivity;
-import com.mm.brainatlas.utils.ApplicationLog;
-import com.mm.brainatlas.utils.StringToLogParser;
 import com.mm.brainatlas_android.R;
 
 import android.R.color;
-import android.R.integer;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 

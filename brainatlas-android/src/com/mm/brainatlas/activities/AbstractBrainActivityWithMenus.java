@@ -48,7 +48,6 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
 	protected void showHelpMeActivity() {
 		Intent intent = new Intent(this, AppGuideActivity.class);
 		startActivity(intent);
-		Toast.makeText(this, R.string.not_implemented_yet, Toast.LENGTH_SHORT).show();
 	}
 
 	protected void showBrainPartsActivity() {

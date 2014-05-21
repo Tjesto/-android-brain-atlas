@@ -15,7 +15,7 @@ public final class EmailEvents {
 	private static final String TEST_SUBJECT = "Wiadomoœæ testowa";
 	private static final String TEST_MESSAGE = "To jest wiadomoœæ testowa wys³ana z aplikacji Atlas Mózgu. Jak widaæ wysy³anie maili dzia³a";
 
-	public static void sendContactMail(Context context) {		
+	public static void sendContactMail(Context context) {	
 		Intent intent = new Intent(Intent.ACTION_SENDTO);
 		intent.setType("message/rfc822");
 		intent.putExtra(Intent.EXTRA_SUBJECT, CONTACT_SUBJECT);
@@ -42,7 +42,7 @@ public final class EmailEvents {
 	}
 
 	public static void sendExceptionInfo(Context context, Thread thread,
-			Throwable ex) {
+			Throwable ex) {				
 		Intent intent = new Intent(Intent.ACTION_SENDTO);
 		intent.setType("message/rfc822");
 		intent.putExtra(Intent.EXTRA_SUBJECT, StringToLogParser.getExceptionEmailSubject(ex));
