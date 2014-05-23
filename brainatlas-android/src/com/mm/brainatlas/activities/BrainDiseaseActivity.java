@@ -37,7 +37,8 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 		intent.putExtra(BrainInfoActivity.INFO_TYPE, infoSubject);
 		startService(intent);
 		matchLayoutPartsWithData();
-		setListeners();
+		setListeners();		
+		addMenuButton(this);
 	}
 	
 	private void setListeners() {

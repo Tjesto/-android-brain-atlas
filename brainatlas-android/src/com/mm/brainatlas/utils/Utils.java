@@ -11,7 +11,7 @@ import com.mm.brainatlas_android.R;
 
 public class Utils {
 	public static final boolean DEBUG_FLAG = true;
-	public static final boolean FOR_STUDIES = true;
+	public static final boolean FOR_STUDIES = false;
 	public static final boolean isTestVersion = true;
 	public static final boolean ALPHA = true;
 	
@@ -97,7 +97,7 @@ public class Utils {
 				builder.append('s');
 			} else if (c.equals('Ÿ') || c.equals('¿')) {
 				builder.append('z');
-			} else if (c.equals(' ') || c.equals('-')) {
+			} else if (c.equals(' ') || c.equals('-') || c.equals('\n')) {
 				builder.append('_');
 			} else if (c.equals('(') || c.equals(')')) {
 					//do nothing

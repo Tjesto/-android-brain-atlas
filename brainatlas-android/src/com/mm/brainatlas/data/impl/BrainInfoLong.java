@@ -1,4 +1,4 @@
-package com.mm.brainatlas.data;
+package com.mm.brainatlas.data.impl;
 
 import com.mm.brainatlas.utils.Utils;
 

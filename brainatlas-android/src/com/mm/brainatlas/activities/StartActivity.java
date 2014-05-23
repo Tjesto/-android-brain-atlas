@@ -40,7 +40,7 @@ public class StartActivity extends Activity {
 			@Override
 			public void run() {				
 				try {
-					Thread.sleep(Utils.isTestVersion ? 7000 : 5000);						
+					Thread.sleep(5000);						
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

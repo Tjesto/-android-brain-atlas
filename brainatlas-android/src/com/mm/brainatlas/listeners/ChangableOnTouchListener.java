@@ -3,8 +3,8 @@ package com.mm.brainatlas.listeners;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mm.brainatlas.activities.Changable;
-import com.mm.brainatlas.activities.Changable.Direction;
+import com.mm.brainatlas.activities.impl.Changable;
+import com.mm.brainatlas.activities.impl.Changable.Direction;
 
 import android.util.Log;
 import android.view.MotionEvent;

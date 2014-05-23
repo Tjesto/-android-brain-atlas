@@ -3,8 +3,8 @@ package com.mm.brainatlas.listeners;
 import com.mm.brainatlas.SourcesAdapter;
 import com.mm.brainatlas.activities.SourcesActivity;
 import com.mm.brainatlas.data.LectureSourceInfo;
-import com.mm.brainatlas.data.SourceInfo;
 import com.mm.brainatlas.data.WebsiteSourceInfo;
+import com.mm.brainatlas.data.impl.SourceInfo;
 
 import android.view.View;
 import android.widget.AdapterView;

@@ -2,6 +2,7 @@ package com.mm.brainatlas.data;
 
 import java.lang.reflect.Field;
 
+import com.mm.brainatlas.data.impl.BrainInfoLong;
 import com.mm.brainatlas.utils.IllegalStringFormatException;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;

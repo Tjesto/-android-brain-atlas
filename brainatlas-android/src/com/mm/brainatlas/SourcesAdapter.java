@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.mm.brainatlas.data.BookSourceInfo;
 import com.mm.brainatlas.data.InterestingSourceInfo;
-import com.mm.brainatlas.data.SourceInfo;
+import com.mm.brainatlas.data.impl.SourceInfo;
 import com.mm.brainatlas_android.R;
 
 import android.content.Context;

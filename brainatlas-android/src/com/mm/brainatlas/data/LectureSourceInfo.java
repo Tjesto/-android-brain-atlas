@@ -1,5 +1,7 @@
 package com.mm.brainatlas.data;
 
+import com.mm.brainatlas.data.impl.SourceInfo;
+
 public class LectureSourceInfo extends SourceInfo {
 
 	private final String lecturerName;

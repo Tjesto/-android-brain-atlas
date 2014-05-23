@@ -4,8 +4,8 @@ import android.content.Context;
 
 import com.mm.brainatlas.data.BookSourceInfo;
 import com.mm.brainatlas.data.LectureSourceInfo;
-import com.mm.brainatlas.data.SourceInfo;
 import com.mm.brainatlas.data.WebsiteSourceInfo;
+import com.mm.brainatlas.data.impl.SourceInfo;
 import com.mm.brainatlas.utils.Pair;
 
 public final class SourceInfoFactory {		

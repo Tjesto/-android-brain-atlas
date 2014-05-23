@@ -1,6 +1,8 @@
 package com.mm.brainatlas.activities;
 
 import com.mm.brainatlas.BrainView;
+import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
+import com.mm.brainatlas.activities.impl.Changable;
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.data.ShortBrainPartInfo;
 import com.mm.brainatlas.listeners.ChangableOnTouchListener;
@@ -20,8 +22,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -64,11 +68,23 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 		setContentView(R.layout.main);
 		topView = (TextView) findViewById(R.id.view_mode_top);
 		innerView = (TextView) findViewById(R.id.view_mode_inner);
+		//currently, until the innerView screen implemented
+		topView.setVisibility(View.INVISIBLE);
+		innerView.setVisibility(View.INVISIBLE);
+		//end of current temporary block
 		brainView = (BrainView) findViewById(R.id.part_view);
 		brainView.setActivity(this);
 		listener = new ChangableOnTouchListener(this);
 		context = this;
 		activity = this;
+		/*((ImageView) findViewById(R.id.menu_button)).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				openOptionsMenu();
+			}
+		});*/
+		addMenuButton(this);
 	}
 	
 	@Override

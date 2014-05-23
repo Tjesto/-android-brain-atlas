@@ -1,5 +1,7 @@
 package com.mm.brainatlas.data;
 
+import com.mm.brainatlas.data.impl.SourceInfo;
+
 public class BookSourceInfo extends SourceInfo {
 
 	private String bookRecord;

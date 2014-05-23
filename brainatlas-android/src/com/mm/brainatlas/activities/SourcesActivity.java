@@ -5,11 +5,12 @@ import java.util.Map;
 
 import com.mm.brainatlas.SourceInfoFactory;
 import com.mm.brainatlas.SourcesAdapter;
+import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
 import com.mm.brainatlas.data.BookSourceInfo;
 import com.mm.brainatlas.data.InterestingSourceInfo;
 import com.mm.brainatlas.data.LectureSourceInfo;
-import com.mm.brainatlas.data.SourceInfo;
 import com.mm.brainatlas.data.WebsiteSourceInfo;
+import com.mm.brainatlas.data.impl.SourceInfo;
 import com.mm.brainatlas.listeners.OnSourceItemClickListener;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas_android.R;
@@ -33,6 +34,7 @@ public class SourcesActivity extends AbstractBrainActivityWithMenus {
 		startService(intent);
 		setContentView(R.layout.sources);
 		createSourceList();
+		addMenuButton(this);
 	}
 	
 	@Override

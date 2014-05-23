@@ -10,8 +10,9 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mm.brainatlas.data.BrainInfo;
-import com.mm.brainatlas.data.BrainInfoLong;
+import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
+import com.mm.brainatlas.data.impl.BrainInfo;
+import com.mm.brainatlas.data.impl.BrainInfoLong;
 import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.StringToLogParser;
 import com.mm.brainatlas.utils.Utils;

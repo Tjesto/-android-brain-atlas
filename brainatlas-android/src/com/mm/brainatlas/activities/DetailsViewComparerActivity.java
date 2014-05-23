@@ -1,5 +1,6 @@
 package com.mm.brainatlas.activities;
 
+import com.mm.brainatlas.activities.impl.Changable;
 import com.mm.brainatlas.listeners.ChangableOnTouchListener;
 import com.mm.brainatlas.listeners.OnLongItemClickListnere;
 import com.mm.brainatlas.utils.Utils;

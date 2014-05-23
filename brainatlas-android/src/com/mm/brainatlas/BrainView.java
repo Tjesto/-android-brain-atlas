@@ -26,6 +26,7 @@ public class BrainView extends View {
 	private float leftPos;
 	private float topPos;
 	private final String text;
+	private Canvas c;
 	
 	private final List<BrainPartView> brainPartViews;
 	private MainActivity parentActivity;
@@ -53,6 +54,9 @@ public class BrainView extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
+		if (c == null) {
+			c = canvas;
+		}
 		if (paint == null) {
 			paint = new Paint();
 		}
@@ -73,13 +77,22 @@ public class BrainView extends View {
 					return true;
 				}
 			}
-			Intent intent = new Intent(context, BrainPartInfoActivity.class);
-			intent.putExtra(BrainInfoActivity.INFO_TYPE, text);
-			parentActivity.startInfoActivity(intent, text);
+			if (checkCoordinates(event.getX(), event.getY())) {
+				Intent intent = new Intent(context, BrainPartInfoActivity.class);
+				intent.putExtra(BrainInfoActivity.INFO_TYPE, text);			
+				parentActivity.startInfoActivity(intent, text);
+			}
 		}
 		return true;
 	}
 	
+	private boolean checkCoordinates(float x, float y) {		
+		return x > (c.getWidth() - background.getWidth()/2) / 2
+				&& x < background.getWidth()
+				&& y > (2*c.getHeight()/ 3)
+				&& y < background.getHeight();
+	}
+
 	public MainActivity getActivity() {		 
 		return parentActivity;
 	}

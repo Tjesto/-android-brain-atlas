@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.mm.brainatlas.data.SourceInfo;
+import com.mm.brainatlas.data.impl.SourceInfo;
 import com.mm.brainatlas.utils.Pair;
 
 public class SourceInfoFactoryTest {

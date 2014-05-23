@@ -2,6 +2,7 @@ package com.mm.brainatlas.activities;
 
 import java.util.List;
 
+import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.listeners.OnListItemClickListener;
 import com.mm.brainatlas_android.R;

@@ -1,5 +1,6 @@
 package com.mm.brainatlas.data;
 
+import com.mm.brainatlas.data.impl.BrainInfo;
 import com.mm.brainatlas_android.R;
 
 import android.content.Context;

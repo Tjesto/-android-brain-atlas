@@ -1,4 +1,4 @@
-package com.mm.brainatlas.data;
+package com.mm.brainatlas.data.impl;
 
 public interface BrainInfo {
 	

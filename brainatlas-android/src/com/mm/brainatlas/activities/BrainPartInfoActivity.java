@@ -34,6 +34,7 @@ public class BrainPartInfoActivity extends BrainInfoActivity {
 		startService(intent);
 		matchLayoutPartsWithData();
 		addListeners();
+		addMenuButton(this);
 	}
 
 	private void addListeners() {

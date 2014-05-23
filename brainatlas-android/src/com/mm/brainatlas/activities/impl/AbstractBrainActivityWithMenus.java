@@ -1,5 +1,10 @@
-package com.mm.brainatlas.activities;
+package com.mm.brainatlas.activities.impl;
 
+import com.mm.brainatlas.MenuButtonView;
+import com.mm.brainatlas.activities.AppGuideActivity;
+import com.mm.brainatlas.activities.ListViewActivity;
+import com.mm.brainatlas.activities.MainActivity;
+import com.mm.brainatlas.activities.SourcesActivity;
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas_android.R;
@@ -9,11 +14,16 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.Toast;
 
 public abstract class AbstractBrainActivityWithMenus extends Activity {
 
 	private static final String EXIT_ACTIVITY = null;	
+	
+	protected MenuButtonView menuButton;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,6 +94,30 @@ public abstract class AbstractBrainActivityWithMenus extends Activity {
         startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(startMain);
         finish();
+	}
+	
+	protected void addMenuButton(final AbstractBrainActivityWithMenus activity) {
+		if (menuButton == null) {
+			int x = calculateX();
+			int y = calculateY();
+			menuButton = new MenuButtonView(activity, activity, x, y);
+		}
+		addContentView(menuButton, new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+		menuButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				activity.openOptionsMenu();
+			}
+		});
+	}
+
+	private int calculateY() {
+		return getResources().getDisplayMetrics().heightPixels;
+	}
+
+	private int calculateX() {
+		return getResources().getDisplayMetrics().widthPixels;
 	}
 	
 }

@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mm.brainatlas.data.impl.BrainInfoLong;
 import com.mm.brainatlas_android.R;
 
 import android.content.Context;
