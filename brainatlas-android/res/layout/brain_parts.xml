@@ -1,80 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-<LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/bp_textview_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/bp_name"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    
-    <LinearLayout 
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
 
-	    <ImageView
-	        android:id="@+id/bp_imageview"
-	        android:layout_width="150dp"
-	        android:layout_height="150dp"
-			android:layout_gravity="center_vertical"
-	        android:layout_marginLeft="30dp"
-	        android:layout_marginTop="10dp"
-	        android:contentDescription="@string/info_picture"
-	        android:src="@drawable/splash_icon" />
-		<LinearLayout 
-		    android:layout_width="match_parent"
-	    	android:layout_height="match_parent" 
-	    	android:orientation="vertical"
-	    	android:layout_marginTop="20dp">
-	    	
-	    <TextView
-	         android:id="@+id/bp_anatomy_view"
-	         android:layout_width="wrap_content"
-	         android:layout_height="wrap_content"
-	         android:layout_marginLeft="10dp"
-	         android:text="@string/bp_anatomy"
-	         android:textAppearance="?android:attr/textAppearanceMedium" />
-	    
-	    
-	    <TextView
-	        android:id="@+id/bp_textview_2"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="10dp"
-	        android:layout_marginRight="30dp"
-	        android:layout_gravity="center_vertical"
-	        android:text="@string/bp_desc" />
-	    </LinearLayout>
-    
+        <include layout="@layout/menu_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/bp_textview_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/bp_name"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/bp_imageview"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/info_picture"
+                    android:src="@drawable/splash_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/bp_anatomy_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/bp_anatomy"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/bp_textview_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/bp_desc" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bp_function_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/bp_functions"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/bp_textview_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/bp_desc" />
+        </LinearLayout>
     </LinearLayout>
-   		 <TextView
-	         android:id="@+id/bp_function_view"
-	         android:layout_width="wrap_content"
-	         android:layout_height="wrap_content"
-	         android:layout_marginLeft="30dp"
-	         android:layout_marginTop="15dp"
-	         android:text="@string/bp_functions"
-	         android:textAppearance="?android:attr/textAppearanceMedium" />
-	    
-	    
-	    <TextView
-	        android:id="@+id/bp_textview_3"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="30dp"
-	        android:layout_marginRight="30dp"
-	        android:layout_gravity="center_vertical"
-	        android:text="@string/bp_desc" />
 
-</LinearLayout>
 </ScrollView>

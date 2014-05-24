@@ -1,4 +1,4 @@
-package com.mm.brainatlas;
+package com.mm.brainatlas.views;
 
 import java.util.List;
 

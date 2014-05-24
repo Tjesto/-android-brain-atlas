@@ -1,4 +1,4 @@
-package com.mm.brainatlas;
+package com.mm.brainatlas.views;
 
 import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
 import com.mm.brainatlas.utils.ApplicationLog;
@@ -28,6 +28,13 @@ public class MenuButtonView extends ImageView {
 		super.setRight(x + icon.getWidth());
 		super.setBottom(y + icon.getHeight());
 		super.setImageBitmap(icon);
+	}
+	
+	public int getImageWidth() {
+		return icon.getWidth();
+	}
+	public int getImageHeight() {
+		return icon.getHeight();
 	}
 		
 	

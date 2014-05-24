@@ -2,142 +2,141 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    
-<LinearLayout  
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:orientation="vertical">	    
 
-    <TextView
-        android:id="@+id/bd_textview_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/bd_name"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-
-    <TextView
-         android:id="@+id/bd_textview_2"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="10dp"
-         android:layout_marginLeft="30dp"
-         android:layout_marginRight="30dp"
-         android:text="@string/bd_e_desc" />
-
-
-    
-     
-     <TextView
-         android:id="@+id/bd_symptoms_view"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/bd_symptoms"
-         android:layout_marginLeft="30dp"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-     <TextView
-         android:id="@+id/bd_textview_3"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginLeft="30dp"
-         android:layout_marginRight="30dp"
-         android:text="@string/bd_c_desc" />
-
-     <LinearLayout 
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="6">
-        
-	    <LinearLayout 
-		    android:layout_width="match_parent"
-	    	android:layout_height="match_parent" 
-	    	android:orientation="vertical"
-	    	android:layout_marginTop="20dp"
-	    	android:layout_marginLeft="30dp"
-	    	android:layout_weight="1">
-	    	
-		    <TextView
-		         android:id="@+id/bd_ethymology_view"
-		         android:layout_width="wrap_content"
-		         android:layout_height="wrap_content"
-		         
-		         android:text="@string/bd_etymology"
-		         android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
 
-		     <TextView
-		         android:id="@+id/bd_textview_4"
-		         android:layout_width="wrap_content"
-		         android:layout_height="wrap_content"		         
-		         android:text="@string/bd_e_desc" />
+        <include layout="@layout/menu_layout" />
 
-     	</LinearLayout>
-     	
-	    <ImageView
-	         android:id="@+id/bd_imageview_1"
-	         android:layout_width="match_parent"
-	         android:layout_height="100dp"
-	         android:layout_marginTop="10dp"
-	         android:layout_marginRight="30dp"
-	         android:layout_marginLeft="10dp"
-	         android:src="@drawable/ic_launcher"
-	         android:contentDescription="@string/info_picture" 
-	         android:layout_weight="5"/>
-     	
-     </LinearLayout>
-     
-	<LinearLayout
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_marginLeft="30dp"
-	    android:layout_marginRight="30dp"
-	    android:orientation="horizontal" 
-	    android:weightSum="6">
-        
-	    <LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="match_parent"
-	        android:layout_marginRight="10dp"
-	        android:layout_marginTop="20dp"
-	        android:orientation="vertical" 
-	        android:layout_weight="1">
-	    	
-		     <TextView
-		         android:id="@+id/bd_cure_view"
-		         android:layout_width="wrap_content"
-		         android:layout_height="wrap_content"
-		         android:text="@string/bd_cure"
-		         android:textAppearance="?android:attr/textAppearanceMedium" />
-	
-		     <TextView
-		         android:id="@+id/bd_textview_5"
-		         android:layout_width="wrap_content"
-		         android:layout_height="wrap_content"
-		         android:text="@string/bd_s_desc" />
-		     
-		     
-     	</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-	    <ImageView
-	        android:id="@+id/bd_imageview_2"
-	        android:layout_width="match_parent"
-	        android:layout_height="100dp"
-	        android:layout_marginRight="30dp"
-	        android:contentDescription="@string/info_picture"
-	        android:src="@drawable/full_brain_top" 
-	        android:layout_weight="5"/>
-	    
-     </LinearLayout>
-     
-	<ImageView
-        android:id="@+id/bd_imageview_3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginRight="30dp"
-        android:contentDescription="@string/info_picture"
-        android:src="@drawable/full_brain_top" />     
-</LinearLayout>
+            <TextView
+                android:id="@+id/bd_textview_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/bd_name"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/bd_textview_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/bd_e_desc" />
+
+            <TextView
+                android:id="@+id/bd_symptoms_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="@string/bd_symptoms"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/bd_textview_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/bd_c_desc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/bd_ethymology_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bd_etymology"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/bd_textview_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bd_e_desc" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/bd_imageview_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="5"
+                    android:contentDescription="@string/info_picture"
+                    android:src="@drawable/ic_launcher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal"
+                android:weightSum="6" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/bd_cure_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bd_cure"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/bd_textview_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bd_s_desc" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/bd_imageview_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="5"
+                    android:contentDescription="@string/info_picture"
+                    android:src="@drawable/full_brain_top" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/bd_imageview_3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="30dp"
+                android:contentDescription="@string/info_picture"
+                android:src="@drawable/full_brain_top" />
+        </LinearLayout>
+    </LinearLayout>
+
 </ScrollView>

@@ -78,7 +78,7 @@ public class StartActivity extends Activity {
 	private static AlertDialog createInfoDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setIcon(android.R.drawable.ic_dialog_info);        
-        builder.setMessage(Utils.ALPHA ? R.string.test_alpha : 0);
+        builder.setMessage(Utils.ALPHA ? R.string.test_alpha : R.string.test_beta);
         builder.setNeutralButton(context.getString(R.string.text_ok), new DialogInterface.OnClickListener() {
             
             @Override

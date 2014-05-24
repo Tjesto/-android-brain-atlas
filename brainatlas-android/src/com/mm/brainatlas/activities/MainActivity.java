@@ -1,6 +1,5 @@
 package com.mm.brainatlas.activities;
 
-import com.mm.brainatlas.BrainView;
 import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
 import com.mm.brainatlas.activities.impl.Changable;
 import com.mm.brainatlas.data.DataFactory;
@@ -11,6 +10,7 @@ import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.StringToLogParser;
 import com.mm.brainatlas.utils.Utils;
+import com.mm.brainatlas.views.BrainView;
 import com.mm.brainatlas_android.R;
 
 import android.annotation.SuppressLint;

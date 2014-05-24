@@ -16,7 +16,7 @@ public abstract class BrainInfoLong implements BrainInfo{
 	protected final Context context;
 	
 	public BrainInfoLong(Context context, String name) {
-		this.name = context.getText(Utils.getStringFromName(name)).toString();
+		this.name = context.getText(Utils.getStringFromName(Utils.normalizeName(name))).toString();
 		this.context = context;
 	}
 	
