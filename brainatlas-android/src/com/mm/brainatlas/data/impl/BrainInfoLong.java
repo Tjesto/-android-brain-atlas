@@ -1,5 +1,7 @@
 package com.mm.brainatlas.data.impl;
 
+import com.mm.brainatlas.utils.ApplicationLog;
+import com.mm.brainatlas.utils.StringToLogParser;
 import com.mm.brainatlas.utils.Utils;
 
 import android.content.Context;
@@ -16,6 +18,7 @@ public abstract class BrainInfoLong implements BrainInfo{
 	protected final Context context;
 	
 	public BrainInfoLong(Context context, String name) {
+		ApplicationLog.error("STR",StringToLogParser.parseForErrorLog("BRAININFO", "", name, Utils.normalizeName(name)));
 		this.name = context.getText(Utils.getStringFromName(Utils.normalizeName(name))).toString();
 		this.context = context;
 	}

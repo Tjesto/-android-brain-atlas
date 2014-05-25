@@ -17,6 +17,7 @@ import com.mm.brainatlas_android.R;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -38,6 +39,7 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 	
 	protected Animation show;
 	protected Animation hide;
+	protected ListView lv;
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -69,6 +71,31 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 		}
 	}
 	
+	@Override
+	public boolean onKeyUp(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_MENU) {
+			if (menuOpened) {
+				closeMenu();
+			} else {
+				openMenu();
+			}
+			return true;
+		}
+		return super.onKeyUp(keyCode, event);
+	}
+	
+	private void closeMenu() {
+		lv.startAnimation(hide);
+		lv.setVisibility(View.GONE);
+		menuOpened = false;
+	}
+
+	private void openMenu() {
+		lv.setVisibility(View.VISIBLE);
+		lv.startAnimation(show);
+		menuOpened = true;
+	}
+
 	public boolean executeMenuAction(MenuAction action) {
 		switch(action) {
 		case SHOW_DISEASES:
@@ -138,7 +165,7 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 			int y = calculateY();
 			menuButton = new MenuButtonView(activity, activity, x, y);
 		}
-		final ListView lv = (ListView) findViewById(R.id.menu_drawer);
+		lv = (ListView) findViewById(R.id.menu_drawer);
 		lv.setPadding(menuButton.getWidth(), menuButton.getHeight(), 0, 0);
 		MenuAdapter adapter = new MenuAdapter(activity, R.layout.single_list_menu_item, createMenuItems(), null);
 		lv.setAdapter(adapter);
@@ -152,13 +179,9 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				if (menuOpened) {
-					lv.startAnimation(hide);
-					lv.setVisibility(View.GONE);
-					menuOpened = false;
+					closeMenu();
 				} else {
-					lv.setVisibility(View.VISIBLE);
-					lv.startAnimation(show);
-					menuOpened = true;
+					openMenu();
 				}
 			}
 		});
