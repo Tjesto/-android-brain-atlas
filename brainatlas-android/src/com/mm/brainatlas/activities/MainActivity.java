@@ -44,7 +44,7 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 	
 	private ViewMode currentViewMode = ViewMode.TOP; 
 	
-	private BrainView brainView;
+	private static BrainView brainView;
 	
 	private ChangableOnTouchListener listener;
 	
@@ -126,6 +126,7 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 	public void startInfoActivity(Intent intent, String part) {	
 		shortBrainPartInfo = new ShortBrainPartInfo(context, Utils.normalizeName(part));
 		intentToStart = intent;
+		brainView.blockClicking();
 		showDialog();
 	}		
 	
@@ -158,10 +159,11 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
     
 
     protected static void onNegativeClick() {		
-		
+		brainView.unblockClicking();
 	}
 
 	protected static void onPositiveClick() {
+		brainView.unblockClicking();
 		context.startActivity(intentToStart);
 		activity.finish();
 	}

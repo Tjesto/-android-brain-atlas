@@ -30,6 +30,7 @@ public class BrainView extends View {
 	
 	private final List<BrainPartView> brainPartViews;
 	private MainActivity parentActivity;
+	private boolean isBlocked = false;
 
 	public BrainView(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -71,6 +72,9 @@ public class BrainView extends View {
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
+		if (isBlocked) {
+			return false;
+		}
 		if (event.getAction() == MotionEvent.ACTION_UP) {
 			for (BrainPartView view : brainPartViews) {
 				if (view.onTouchEvent(event)) {
@@ -95,6 +99,16 @@ public class BrainView extends View {
 
 	public MainActivity getActivity() {		 
 		return parentActivity;
+	}
+
+	public void blockClicking() {
+		isBlocked  = true;
+		
+	}
+
+	public void unblockClicking() {
+		isBlocked = false;
+		
 	}
 
 }

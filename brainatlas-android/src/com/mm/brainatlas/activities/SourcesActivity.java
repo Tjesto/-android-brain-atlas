@@ -68,6 +68,9 @@ public class SourcesActivity extends AbstractBrainActivityWithMenus {
 		sourceList.add(new WebsiteSourceInfo(getText(
 				R.string.source_alzheimerassociation_name).toString(), getText(
 				R.string.source_alzheimerassociation_link).toString()));
+		sourceList.add(new WebsiteSourceInfo(
+				getText(R.string.source_neuroforma_name).toString(),
+				getText(R.string.source_neuroforma_link).toString()));
 		
 		interestingList.add(new InterestingSourceInfo(this, getText(
 				R.string.source_nowotwormozgu_name).toString(), getText(

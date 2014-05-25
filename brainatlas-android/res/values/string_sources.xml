@@ -12,4 +12,6 @@
     <string name="source_padaczka_link">http://www.padaczka-epilepsja.pl/epilepsja</string>
     <string name="source_radiopaedia_name">radiopaedia.org</string>
     <string name="source_radiopaedia_link">http://radiopaedia.org/articles/huntington-disease</string>
+    <string name="source_neuroforma_name">neuroforma.pl</string>
+    <string name="source_neuroforma_link">http://www.neuroforma.pl</string>
 </resources>
