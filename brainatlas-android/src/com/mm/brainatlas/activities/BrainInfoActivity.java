@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
@@ -27,6 +28,7 @@ public abstract class BrainInfoActivity extends AbstractBrainActivityWithMenus {
 	protected List<TextView> textViews;
 	protected List<ImageView> imageViews;
 	protected BrainInfoLong brainInfo;
+	protected View view;
 	
 	protected void getLayoutParts(String prefix) {
 		textViews = new ArrayList<TextView>();
@@ -37,7 +39,8 @@ public abstract class BrainInfoActivity extends AbstractBrainActivityWithMenus {
 		for (Field f : refClass.getFields()) {
 			if (f.getName().contains(text)) {
 				try {
-					textViews.add((TextView) findViewById(f.getInt(refClass)));
+					//textViews.add((TextView) findViewById(f.getInt(refClass)));
+					textViews.add((TextView) view.findViewById(f.getInt(refClass)));
 				} catch (IllegalAccessException e) {
 					e.printStackTrace();
 				} catch (IllegalArgumentException e) {
@@ -45,7 +48,8 @@ public abstract class BrainInfoActivity extends AbstractBrainActivityWithMenus {
 				}
 			} else if (f.getName().contains(image)) {
 				try {
-					imageViews.add((ImageView) findViewById(f.getInt(refClass)));
+					//imageViews.add((ImageView) findViewById(f.getInt(refClass)));
+					imageViews.add((ImageView) view.findViewById(f.getInt(refClass)));
 				} catch (IllegalAccessException e) {
 					e.printStackTrace();
 				} catch (IllegalArgumentException e) {
@@ -91,7 +95,15 @@ public abstract class BrainInfoActivity extends AbstractBrainActivityWithMenus {
 				imageViews.get(i).setVisibility(View.VISIBLE);
 			}
 		}
-		
+		int imageHeight = imageViews.get(0).getVisibility() == View.VISIBLE ? imageViews.get(0).getMeasuredHeight() : -1;
+		/*LinearLayout l1 = (LinearLayout) view.findViewById(R.id.l1);
+		LinearLayout l2 = (LinearLayout) view.findViewById(R.id.l2);
+		LinearLayout text1 = (LinearLayout) view.findViewById(R.id.text1);
+		LinearLayout text2 = (LinearLayout) view.findViewById(R.id.text2);
+		l1.setLayoutParams(new LinearLayout.LayoutParams(l1.getMeasuredWidth(), Math.max(imageHeight, text1.getMeasuredHeight())));
+		imageHeight = imageViews.get(1).getVisibility() == View.VISIBLE ? imageViews.get(1).getMeasuredHeight() : -1;
+		l2.setLayoutParams(new LinearLayout.LayoutParams(l2.getMeasuredWidth(), Math.max(imageHeight, text2.getMeasuredHeight())));
+		ApplicationLog.debugWithFilter(TAG, l1.getMeasuredHeight() + ";;" + l2.getMeasuredHeight());*/
 		//zeroDimensions();
 	}
 

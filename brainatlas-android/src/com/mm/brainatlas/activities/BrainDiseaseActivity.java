@@ -8,8 +8,10 @@ import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -22,7 +24,8 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.brain_disease);
+		//setContentView(R.layout.brain_disease);
+		view = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.brain_disease, null);
 		getLayoutParts("bd_");
 		Intent intent = new Intent(this, BrainService.class);
 		intent.putExtra(BrainService.NOTIFY_ACTIVITY_CHANGE_KEY, TAG);
@@ -38,6 +41,7 @@ public class BrainDiseaseActivity extends BrainInfoActivity {
 		startService(intent);
 		matchLayoutPartsWithData();
 		setListeners();		
+		setContentView(view);
 		addMenuButton(this);
 	}
 	

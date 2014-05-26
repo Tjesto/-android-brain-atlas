@@ -81,6 +81,12 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 			}
 			return true;
 		}
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			if (menuOpened) {
+				closeMenu();
+				return true;
+			}
+		}
 		return super.onKeyUp(keyCode, event);
 	}
 	
@@ -91,8 +97,8 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 	}
 
 	private void openMenu() {
-		lv.setVisibility(View.VISIBLE);
 		lv.startAnimation(show);
+		lv.setVisibility(View.VISIBLE);
 		menuOpened = true;
 	}
 

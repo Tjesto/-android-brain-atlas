@@ -7,8 +7,10 @@ import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.widget.ImageView;
 
 public class BrainPartInfoActivity extends BrainInfoActivity {
@@ -18,7 +20,8 @@ public class BrainPartInfoActivity extends BrainInfoActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.brain_parts);
+		//setContentView(R.layout.brain_parts);
+		view = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.brain_parts, null);
 		Intent intent = new Intent(this, BrainService.class);
 		intent.putExtra(BrainService.NOTIFY_ACTIVITY_CHANGE_KEY, TAG);
 		intent.setAction(BrainService.ACTION_NOTIFY_ACTIVITY_CHANGE);
@@ -32,8 +35,9 @@ public class BrainPartInfoActivity extends BrainInfoActivity {
 		brainInfo = DataFactory.getInfoForClass(this, TAG, infoSubject);
 		intent.putExtra(BrainInfoActivity.INFO_TYPE, infoSubject);
 		startService(intent);
-		matchLayoutPartsWithData();
+		matchLayoutPartsWithData();		
 		addListeners();
+		setContentView(view);
 		addMenuButton(this);
 	}
 
