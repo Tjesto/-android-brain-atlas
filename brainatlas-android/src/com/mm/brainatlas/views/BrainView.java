@@ -5,6 +5,7 @@ import java.util.List;
 import com.mm.brainatlas.activities.BrainInfoActivity;
 import com.mm.brainatlas.activities.BrainPartInfoActivity;
 import com.mm.brainatlas.activities.MainActivity;
+import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas_android.R;
 
 import android.R.color;
@@ -82,9 +83,7 @@ public class BrainView extends View {
 				}
 			}
 			if (checkCoordinates(event.getX(), event.getY())) {
-				Intent intent = new Intent(context, BrainPartInfoActivity.class);
-				intent.putExtra(BrainInfoActivity.INFO_TYPE, text);			
-				parentActivity.startInfoActivity(intent, text);
+				ApplicationLog.warn("BrainView", "No childView returned true");				
 			}
 		}
 		return true;

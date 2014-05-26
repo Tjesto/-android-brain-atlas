@@ -61,6 +61,7 @@ public class BrainPartView extends View {
 		result.add(new BrainPartView(context, R.drawable.bp_plat_czolowy_view, context.getText(R.string.bp_plat_czolowy_lobus_frontalis_name).toString(), parent));
 		result.add(new BrainPartView(context, R.drawable.bp_plat_potyliczny_view, context.getText(R.string.bp_plat_potyliczny_lobus_occipitalis_name).toString(), parent));
 		result.add(new BrainPartView(context, R.drawable.bp_plat_skroniowy_view, context.getText(R.string.bp_plat_skroniowy_lobus_temporalis_name).toString(), parent));
+		result.add(new BrainPartView(context, R.drawable.bp_rdzen_przedluzony_view, context.getText(R.string.bp_rdzen_przedluzony_medulla_oblongata_name).toString(), parent));
 		return result;
 	}
 	

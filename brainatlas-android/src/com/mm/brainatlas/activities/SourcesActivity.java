@@ -72,16 +72,16 @@ public class SourcesActivity extends AbstractBrainActivityWithMenus {
 				getText(R.string.source_neuroforma_name).toString(),
 				getText(R.string.source_neuroforma_link).toString()));
 		
-		interestingList.add(new InterestingSourceInfo(this, getText(
+		sourceList.add(new WebsiteSourceInfo(getText(
 				R.string.source_nowotwormozgu_name).toString(), getText(
 				R.string.source_nowotwormozgu_link).toString()));
-		interestingList.add(new InterestingSourceInfo(this, getText(
+		sourceList.add(new WebsiteSourceInfo(getText(
 				R.string.source_tetniak1_name).toString(), getText(
 				R.string.source_tetniak1_link).toString()));
-		interestingList.add(new InterestingSourceInfo(this, getText(
+		sourceList.add(new WebsiteSourceInfo(getText(
 				R.string.source_tetniak2_name).toString(), getText(
 				R.string.source_tetniak2_link).toString()));
-		interestingList.add(new InterestingSourceInfo(this, getText(
+		sourceList.add(new WebsiteSourceInfo(getText(
 				R.string.source_tetniak3_name).toString(), getText(
 				R.string.source_tetniak3_link).toString()));
 		

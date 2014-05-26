@@ -107,9 +107,9 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 		case SHOW_SOURCES:
 			showSourcesActivity();
 			return true;
-		case HELP_ME:
+		/*case HELP_ME:
 			showHelpMeActivity();
-			return true;
+			return true;*/
 		case EXIT:
 			exitAtlas();
 			return true;
@@ -193,7 +193,9 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 		result.add(getText(R.string.action_show_diseases).toString());
 		result.add(getText(R.string.action_show_parts).toString());
 		result.add(getText(R.string.action_show_sources).toString());
-		result.add(getText(R.string.action_help_me).toString());
+		//option removed until guideView will be improved		
+		//result.add(getText(R.string.action_help_me).toString());
+		// end of removement
 		result.add(getText(R.string.action_exit).toString());
 		return result;
 	}
