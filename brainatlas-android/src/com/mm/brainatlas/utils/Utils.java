@@ -11,6 +11,7 @@ import com.mm.brainatlas_android.R;
 
 public class Utils {
 	public static final boolean DEBUG_FLAG = true;
+	//DO NOT MODIFICATE FOR_STUDIES CONSTANT AT ANY CASE
 	public static final boolean FOR_STUDIES = false;
 	public static final boolean isTestVersion = true;
 	public static final boolean ALPHA = false;
