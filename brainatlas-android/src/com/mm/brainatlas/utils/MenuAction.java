@@ -1,7 +1,7 @@
 package com.mm.brainatlas.utils;
 
 public enum MenuAction {
-	SHOW_DISEASES(0), SHOW_PARTS(1), SHOW_SOURCES(2), /*HELP_ME(3),*/ EXIT(3);
+	SHOW_DISEASES(0), SHOW_PARTS(1), SHOW_SOURCES(2), /*HELP_ME(3),*/ EXIT(3), BACK(4);
 
 	private final int id;
 

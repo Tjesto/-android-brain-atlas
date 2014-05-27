@@ -89,7 +89,10 @@ public class BrainView extends View {
 		return true;
 	}
 	
-	private boolean checkCoordinates(float x, float y) {		
+	private boolean checkCoordinates(float x, float y) {	
+		if (c == null || background == null) {
+			return false;
+		}
 		return x > (c.getWidth() - background.getWidth()/2) / 2
 				&& x < background.getWidth()
 				&& y > (2*c.getHeight()/ 3)

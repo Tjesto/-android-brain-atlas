@@ -103,13 +103,8 @@
                         android:id="@+id/bd_textview_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ellipsize="marquee"
-                        android:focusable="true"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
-                        android:focusableInTouchMode="true"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:scrollHorizontally="true"
                         android:text="@string/bd_e_desc" />
                 </LinearLayout>
 
@@ -154,14 +149,9 @@
                         android:id="@+id/bd_textview_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ellipsize="marquee"
-                        android:focusable="true"
                         android:layout_marginLeft="30dp"
                     	android:layout_marginTop="20dp"
                     	android:layout_marginRight="30dp"
-                        android:focusableInTouchMode="true"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:scrollHorizontally="true"
                         android:text="@string/bd_s_desc" />
                 </LinearLayout>
 

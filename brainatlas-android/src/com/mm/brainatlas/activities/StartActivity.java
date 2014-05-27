@@ -3,7 +3,9 @@ package com.mm.brainatlas.activities;
 import com.mm.brainatlas.utils.Utils;
 import com.mm.brainatlas_android.R;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -33,7 +35,11 @@ public class StartActivity extends Activity {
 		}
 		context = this;
 		if (Utils.isTestVersion) {
-			showTestInfoDialog();
+			if (Build.VERSION.SDK_INT >= 11) {
+				showTestInfoDialog();
+			} else {
+				showTestInfoDialogAndroid2();
+			}
 		}
 		new Thread(new Runnable(){
 
@@ -51,10 +57,13 @@ public class StartActivity extends Activity {
 		}).start();
 		
 	}
-		
+	
 	protected void showTestInfoDialog() {
-		showInfoDialog();
-		
+		showInfoDialog();		
+	}
+	
+	protected void showTestInfoDialogAndroid2() {
+		showAndroid2InfoDialog();
 	}
 
 	@Override
@@ -87,8 +96,7 @@ public class StartActivity extends Activity {
             }
 			
         });
-        AlertDialog dialog = builder.create();
-
+        AlertDialog dialog = builder.create();        
         return dialog;
     }
 	
@@ -98,6 +106,13 @@ public class StartActivity extends Activity {
         newFragment.show(getFragmentManager(), TAG);
 
     }
+	
+	private void showAndroid2InfoDialog() {
+		AlertDialog dialog = createInfoDialog();
+		dialog.setCancelable(false);
+		dialog.show();
+		
+	}
 
     public static class InfoDialogFragment extends DialogFragment {
 

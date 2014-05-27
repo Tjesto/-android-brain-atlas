@@ -19,8 +19,10 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -37,6 +39,10 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 	}
 	
 	public static final String TAG = "com.mm.brainatlas.activities.MainActivity";
+
+	private static final String DIALOG_ID = null;
+
+	private static final String DIALOG_TAG = null;
 	
 	private TextView topView;
 	
@@ -53,6 +59,8 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 	private static Intent intentToStart;
 	
 	private String currentlyFocusedPart;
+
+	private boolean dialogShown = false;
 
 	private static MainActivity activity;
 	
@@ -126,8 +134,12 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 	public void startInfoActivity(Intent intent, String part) {	
 		shortBrainPartInfo = new ShortBrainPartInfo(context, Utils.normalizeName(part));
 		intentToStart = intent;
-		brainView.blockClicking();
-		showDialog();
+		brainView.blockClicking();		
+		if (Build.VERSION.SDK_INT >= 11) {
+			showDialog();
+		} else {
+			showAndroid2Dialog();
+		}
 	}		
 	
 	private static AlertDialog createInfoDialog() {
@@ -150,7 +162,7 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
             public void onClick(DialogInterface dialog, int which) {
                 onNegativeClick();                
             }
-        });
+        });        
         AlertDialog dialog = builder.create();
 
         return dialog;
@@ -170,10 +182,25 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 
 	private void showDialog() {
         DialogFragment newFragment = InfoDialogFragment.newInstance();
-        newFragment.setCancelable(false);
-        newFragment.show(getFragmentManager(), TAG);
+        newFragment.setCancelable(true);
+        newFragment.show(getFragmentManager(), DIALOG_TAG);
 
     }
+	
+	private void showAndroid2Dialog() {
+		AlertDialog dialog = createInfoDialog();
+		dialog.setCancelable(true);
+		dialog.setOnCancelListener(new OnCancelListener() {
+			
+			@Override
+			public void onCancel(DialogInterface dialog) {
+				brainView.unblockClicking();
+				
+			}
+		});
+		dialogShown = true;
+		dialog.show();		
+	}
 
     public static class InfoDialogFragment extends DialogFragment {
 
@@ -187,6 +214,12 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
             AlertDialog dialog = createInfoDialog();
             return dialog;
 
+        }
+        
+        @Override
+        public void onCancel(DialogInterface dialog) {
+        	brainView.unblockClicking();
+        	super.onCancel(dialog);
         }
 
     }

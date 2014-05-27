@@ -2,5 +2,5 @@
 <resources>
     <string name="logo">Logo</string>
     <string name="info_picture">Info</string>
-    
+    <string name="action_back">Schowaj menu</string>
 </resources>

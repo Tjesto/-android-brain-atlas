@@ -7,6 +7,7 @@ import com.mm.brainatlas_android.R;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.widget.ImageView;
 
 public class MenuButtonView extends ImageView {
@@ -23,10 +24,14 @@ public class MenuButtonView extends ImageView {
 		int x = xPosition - icon.getWidth();
 		int y = yPosition;
 		ApplicationLog.debugWithFilter("MenuButtonView", "Position: " + x + ";" + y);
-		super.setLeft(x);
-		super.setTop(y);
-		super.setRight(x + icon.getWidth());
-		super.setBottom(y + icon.getHeight());
+		if (Build.VERSION.SDK_INT >= 11) {
+			super.setLeft(x);
+			super.setTop(y);
+			super.setRight(x + icon.getWidth());
+			super.setBottom(y + icon.getHeight());
+		} else {
+			super.setPadding(0, 0, icon.getWidth(), icon.getHeight());
+		}
 		super.setImageBitmap(icon);
 	}
 	

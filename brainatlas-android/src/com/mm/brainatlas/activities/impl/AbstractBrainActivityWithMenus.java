@@ -16,6 +16,7 @@ import com.mm.brainatlas.views.MenuButtonView;
 import com.mm.brainatlas_android.R;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -94,12 +95,18 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 		lv.startAnimation(hide);
 		lv.setVisibility(View.GONE);
 		menuOpened = false;
+		if (Build.VERSION.SDK_INT < 11) {
+			menuButton.setVisibility(View.VISIBLE);
+		}
 	}
 
 	private void openMenu() {
 		lv.startAnimation(show);
 		lv.setVisibility(View.VISIBLE);
 		menuOpened = true;
+		if (Build.VERSION.SDK_INT < 11) {
+			menuButton.setVisibility(View.GONE);
+		}
 	}
 
 	public boolean executeMenuAction(MenuAction action) {
@@ -118,6 +125,9 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 			return true;*/
 		case EXIT:
 			exitAtlas();
+			return true;
+		case BACK:
+			closeMenu();
 			return true;
 		default:
 			return false;
@@ -203,6 +213,9 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 		//result.add(getText(R.string.action_help_me).toString());
 		// end of removement
 		result.add(getText(R.string.action_exit).toString());
+		if (Build.VERSION.SDK_INT < 11) {
+			result.add(getText(R.string.action_back).toString());
+		}
 		return result;
 	}
 
