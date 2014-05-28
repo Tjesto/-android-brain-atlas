@@ -2,41 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
+    android:orientation="horizontal" >
+    <include layout="@layout/menu_layout" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:orientation="horizontal"
-        android:weightSum="15" >
+        android:layout_height="wrap_content"        
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/view_mode_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|center_horizontal"
-            android:layout_weight="1"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/view_mode_top"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/top_view_mode"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/view_mode_inner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top|center_horizontal"
-                android:layout_marginLeft="10dp"
-                android:text="@string/inner_view_mode"
-                android:textColor="@color/gray" />
-        </LinearLayout>
-    </LinearLayout>
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="top|center_horizontal"
+	        android:orientation="horizontal"
+	        android:weightSum="15" >
+	
+	        <LinearLayout
+	            android:id="@+id/view_mode_layout"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="top|center_horizontal"
+	            android:layout_weight="1"
+	            android:orientation="horizontal" >
+	
+	            <TextView
+	                android:id="@+id/view_mode_top"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:text="@string/top_view_mode"
+	                android:textColor="@color/white" />
+	
+	            <TextView
+	                android:id="@+id/view_mode_inner"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="top|center_horizontal"
+	                android:layout_marginLeft="10dp"
+	                android:text="@string/inner_view_mode"
+	                android:textColor="@color/gray" />
+	        </LinearLayout>
+	    </LinearLayout>
 
     <com.mm.brainatlas.views.BrainView
         android:id="@+id/part_view"
@@ -44,5 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:layout_weight="0.63" />
-	<include layout="@layout/menu_layout" />
+	
+	</LinearLayout>	
 </LinearLayout>

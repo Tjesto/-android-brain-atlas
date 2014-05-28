@@ -2,6 +2,7 @@ package com.mm.brainatlas.utils;
 
 import java.lang.reflect.Field;
 
+import android.os.Build;
 import android.util.Log;
 
 import com.mm.brainatlas.activities.MainActivity;
@@ -61,7 +62,8 @@ public class Utils {
 	}
 
 	public static boolean isEmptyOrNull(String string) {
-		if (string == null || string.isEmpty() || string.equals("") || string.length() < 1) {
+		if (string == null || Build.VERSION.SDK_INT < 9 ? false : string
+				.isEmpty() || string.equals("") || string.length() < 1) {
 			return true;
 		}
 		return false;
@@ -126,5 +128,5 @@ public class Utils {
 		return 0;
 	}
 	
-
+	
 }

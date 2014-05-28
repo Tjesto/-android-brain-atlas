@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.mm.brainatlas.activities.impl.Changable;
 import com.mm.brainatlas.activities.impl.Changable.Direction;
+import com.mm.brainatlas.listeners.impl.BrainOnTouchEventListener;
 
 import android.util.Log;
 import android.view.MotionEvent;
@@ -12,20 +13,11 @@ import android.view.View;
 import android.view.View.OnLongClickListener;
 import android.view.View.OnTouchListener;
 
-public class ChangableOnTouchListener implements OnTouchListener {
+public class ChangableOnTouchListener extends BrainOnTouchEventListener {		
 
-	private final Changable activity;
-	private float firstX = -1;
-	private float firstY = -1;
-	private boolean moved = false;
-	private final List<OnLongClickListener> clickListeners;
-	private Direction currentDirection = Direction.UNKNOWN;
-	
-	
 	public ChangableOnTouchListener(Changable activity) {
-		this.activity = activity;
-		clickListeners = new ArrayList<View.OnLongClickListener>();
-	}	
+		super(activity);
+	}
 
 	@Override
 	public boolean onTouch(View arg0, MotionEvent arg1) {

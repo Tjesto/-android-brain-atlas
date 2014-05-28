@@ -1,11 +1,15 @@
 package com.mm.brainatlas.activities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
 import com.mm.brainatlas.activities.impl.Changable;
 import com.mm.brainatlas.data.DataFactory;
 import com.mm.brainatlas.data.ShortBrainPartInfo;
 import com.mm.brainatlas.listeners.ChangableOnTouchListener;
 import com.mm.brainatlas.listeners.OnBrainTouchListener;
+import com.mm.brainatlas.listeners.impl.BrainOnTouchEventListener;
 import com.mm.brainatlas.services.BrainService;
 import com.mm.brainatlas.utils.ApplicationLog;
 import com.mm.brainatlas.utils.StringToLogParser;
@@ -52,7 +56,7 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 	
 	private static BrainView brainView;
 	
-	private ChangableOnTouchListener listener;
+	private List<BrainOnTouchEventListener> onTouchEventListeners;
 	
 	private static Context context;
 	
@@ -82,7 +86,8 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 		//end of current temporary block
 		brainView = (BrainView) findViewById(R.id.part_view);
 		brainView.setActivity(this);
-		listener = new ChangableOnTouchListener(this);
+		onTouchEventListeners = new ArrayList<BrainOnTouchEventListener>();
+		onTouchEventListeners.add(new ChangableOnTouchListener(this));
 		context = this;
 		activity = this;
 		/*((ImageView) findViewById(R.id.menu_button)).setOnClickListener(new OnClickListener() {
@@ -97,7 +102,11 @@ public class MainActivity extends AbstractBrainActivityWithMenus implements Chan
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		//return listener.onTouch(getCurrentFocus(), event);
+		/*for (BrainOnTouchEventListener m : onTouchEventListeners) {
+			if (m.onTouch(getCurrentFocus(), event)) {
+				return true;
+			}
+		}*/
 		return super.onTouchEvent(event);
 	}
 	@Override

@@ -51,13 +51,20 @@ public class BrainNotification {
 				brainService).setSmallIcon(R.drawable.small_notification)
 				.setLargeIcon(largeIcon)
 				.setContentTitle(brainService.getText(R.string.app_name))
-				.setContentText(Utils.getNameFromTag(activityName));
+				.setContentText(Utils.getNameFromTag(getContentText(activityName)));
 		Intent intent = new Intent(brainService, StarterActivity.class);
 		PendingIntent pIntent = PendingIntent.getActivity(brainService, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 		builder.setContentIntent(pIntent);
 		
 		builderNotification = builder.build();
 		return builderNotification;
+	}
+
+	private String getContentText(String activityName) {
+		if (activityName.contains("Activity")) {
+			return "";
+		}
+		return activityName;
 	}
 
 	public void update(String name) {
