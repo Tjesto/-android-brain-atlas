@@ -1,7 +1,6 @@
 package com.mm.brainatlas.activities;
 
 import java.lang.reflect.Field;
-import java.util.List;
 
 import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
 import com.mm.brainatlas.activities.impl.Changable;

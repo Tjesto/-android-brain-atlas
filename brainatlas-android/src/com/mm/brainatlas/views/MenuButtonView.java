@@ -41,11 +41,5 @@ public class MenuButtonView extends ImageView {
 	public int getImageHeight() {
 		return icon.getHeight();
 	}
-		
-	
-	
-
-	
-	
 
 }

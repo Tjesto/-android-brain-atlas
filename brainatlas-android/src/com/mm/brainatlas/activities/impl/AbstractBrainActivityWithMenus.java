@@ -28,12 +28,9 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 
-	private static final String EXIT_ACTIVITY = null;	
-	
 	protected MenuButtonView menuButton;
 
 	protected boolean menuOpened;

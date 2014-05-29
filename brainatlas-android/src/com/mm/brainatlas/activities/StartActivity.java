@@ -5,7 +5,6 @@ import com.mm.brainatlas_android.R;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;

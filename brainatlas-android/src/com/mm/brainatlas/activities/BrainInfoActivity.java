@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mm.brainatlas.activities.impl.AbstractBrainActivityWithMenus;
