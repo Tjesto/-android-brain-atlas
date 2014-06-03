@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 
+@Deprecated
 public class OnBrainTouchListener implements OnTouchListener {
 
 	private final MainActivity activity;

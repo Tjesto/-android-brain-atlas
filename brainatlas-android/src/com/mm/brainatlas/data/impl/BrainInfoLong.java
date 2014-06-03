@@ -19,7 +19,7 @@ public abstract class BrainInfoLong implements BrainInfo{
 	
 	public BrainInfoLong(Context context, String name) {
 		ApplicationLog.error("STR",StringToLogParser.parseForErrorLog("BRAININFO", "", name, Utils.normalizeName(name)));
-		this.name = context.getText(Utils.getStringFromName(Utils.normalizeName(name))).toString();
+		this.name = Utils.formatTitle(context.getText(Utils.getStringFromName(Utils.normalizeName(name))).toString());
 		this.context = context;
 	}
 	

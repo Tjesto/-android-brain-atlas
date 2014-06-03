@@ -127,6 +127,17 @@ public class Utils {
 		}
 		return 0;
 	}
+
+	public static String formatTitle(String title) {
+		StringBuilder builder = new StringBuilder();
+		for (Character c : title.toCharArray()) {
+			if (c.equals('(')) {
+				builder.append("\n");
+			}
+			builder.append(c);
+		}
+		return builder.toString();
+	}
 	
 	
 }

@@ -9,6 +9,7 @@ import com.mm.brainatlas_android.R;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -47,5 +48,21 @@ public class ListViewActivity extends AbstractBrainActivityWithMenus {
 	public void startBrainInfoActivity(Intent intent) {
 		startActivity(intent);
 		finish();
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_MENU) {
+			return true;
+		}
+		return super.onKeyUp(keyCode, event);
+	}
+	
+	@Override
+	public boolean onKeyUp(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_MENU) {
+			return true;
+		}
+		return super.onKeyUp(keyCode, event);
 	}
 }
