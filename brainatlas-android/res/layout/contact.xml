@@ -56,11 +56,4 @@
 	        
     </LinearLayout>
         
-    <ImageView 
-	    android:id="@+id/helper_slider"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:layout_weight="9"
-	    android:background="@drawable/arrows"/>
-        
 </LinearLayout>

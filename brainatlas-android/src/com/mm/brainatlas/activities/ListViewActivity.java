@@ -55,6 +55,10 @@ public class ListViewActivity extends AbstractBrainActivityWithMenus {
 		if (keyCode == KeyEvent.KEYCODE_MENU) {
 			return true;
 		}
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			onBackPressed();
+			return true;
+		}
 		return super.onKeyUp(keyCode, event);
 	}
 	
@@ -65,4 +69,6 @@ public class ListViewActivity extends AbstractBrainActivityWithMenus {
 		}
 		return super.onKeyUp(keyCode, event);
 	}
+	
+	
 }

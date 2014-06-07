@@ -14,7 +14,7 @@ public class Utils {
 	public static final boolean DEBUG_FLAG = true;
 	//DO NOT MODIFICATE FOR_STUDIES CONSTANT AT ANY CASE
 	public static final boolean FOR_STUDIES = false;
-	public static final boolean isTestVersion = true;
+	public static final boolean isTestVersion = false;
 	public static final boolean ALPHA = false;
 	
 	public static Class<?> getActivityFromName(String activityName) {

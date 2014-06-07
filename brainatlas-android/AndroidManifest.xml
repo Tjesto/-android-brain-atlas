@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mm.brainatlas_android"
-    android:versionCode="9"
-    android:versionName="0.9.4" >
+    android:versionCode="10"
+    android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -56,6 +56,9 @@
             android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
         <activity 
             android:name="com.mm.brainatlas.activities.AppGuideActivity" 
+            android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
+        <activity 
+            android:name="com.mm.brainatlas.activities.ContactActivity" 
             android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
         <service android:name="com.mm.brainatlas.services.BrainService" />
     </application>

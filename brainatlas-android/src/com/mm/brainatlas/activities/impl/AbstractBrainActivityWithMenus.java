@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.mm.brainatlas.MenuAdapter;
 import com.mm.brainatlas.activities.AppGuideActivity;
+import com.mm.brainatlas.activities.ContactActivity;
 import com.mm.brainatlas.activities.ListViewActivity;
 import com.mm.brainatlas.activities.MainActivity;
 import com.mm.brainatlas.activities.SourcesActivity;
@@ -117,9 +118,9 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 		case SHOW_SOURCES:
 			showSourcesActivity();
 			return true;
-		/*case HELP_ME:
-			showHelpMeActivity();
-			return true;*/
+		case CONTACT_US:
+			showContactActivity();
+			return true;
 		case EXIT:
 			exitAtlas();
 			return true;
@@ -131,6 +132,11 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 		}
 	}
 	
+	private void showContactActivity() {
+		Intent intent = new Intent(this, ContactActivity.class);
+		startActivity(intent);
+	}
+
 	protected void showHelpMeActivity() {
 		Intent intent = new Intent(this, AppGuideActivity.class);
 		startActivity(intent);
@@ -206,6 +212,7 @@ public abstract class AbstractBrainActivityWithMenus extends FragmentActivity {
 		result.add(getText(R.string.action_show_diseases).toString());
 		result.add(getText(R.string.action_show_parts).toString());
 		result.add(getText(R.string.action_show_sources).toString());
+		result.add(getText(R.string.action_show_contact).toString());
 		//option removed until guideView will be improved		
 		//result.add(getText(R.string.action_help_me).toString());
 		// end of removement

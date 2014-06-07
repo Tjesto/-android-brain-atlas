@@ -15,12 +15,20 @@ import android.view.View.OnTouchListener;
 
 public class ChangableOnTouchListener extends BrainOnTouchEventListener {		
 
+	private boolean blocked = false;
 	public ChangableOnTouchListener(Changable activity) {
 		super(activity);
 	}
 
 	@Override
 	public boolean onTouch(View arg0, MotionEvent arg1) {
+		if (blocked) {
+			if (arg1.getAction() == MotionEvent.ACTION_UP) {
+				for (OnLongClickListener l : clickListeners) {
+					l.onLongClick(arg0);
+				}
+			}
+		}
 		if (arg1.getAction() == MotionEvent.ACTION_DOWN) {
 			firstX = arg1.getX();
 			firstY = arg1.getY();
@@ -68,6 +76,11 @@ public class ChangableOnTouchListener extends BrainOnTouchEventListener {
 
 	public Direction getDirection() {
 		return currentDirection;
+	}
+
+	public void block() {
+		blocked = true;
+		
 	}
 
 }

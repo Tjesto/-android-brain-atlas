@@ -6,6 +6,7 @@
     <string name="top_view_mode">Rzut z zewnątrz</string>
     <string name="inner_view_mode">Rzut przekroju podłużnego</string>
     <string name="action_show_sources">Źródła i ciekawostki</string>
+    <string name="action_show_contact">Kontakt</string>
     <string name="action_help_me">Przewodnik po aplikacji</string>
     <string name="action_exit">Wyjście</string>
     <string name="studies_text">Autorzy:\nMałgorzata Łyczywek\t109667\nMikołaj Szychowiak\t106580</string>

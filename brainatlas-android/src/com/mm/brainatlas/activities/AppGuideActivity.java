@@ -45,10 +45,19 @@ public final class AppGuideActivity extends AbstractBrainActivityWithMenus
 		} else {
 			initialize();
 		}		
+		//Version for contact only
+		setContactView();
+		//end
 		updateView();
-		listener.addClickListnener(new OnEmailToSendClickListener(this));
+		listener.addClickListnener(new OnEmailToSendClickListener(this));		
 	}
 	
+	private void setContactView() {
+		setContentView(R.layout.contact);
+		currentContentView = R.layout.contact;
+		listener.block();
+	}
+
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		return listener.onTouch(getCurrentFocus(), event);
